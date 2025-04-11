@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * Title: Footer
+ * Slug: pa-centrale/hidden-footer
+ * Inserter: no
+ *
+ * @package pa-centrale
+ * @since 1.0.0
+ */
+?>
+<!-- wp:group {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}},"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"0","right":"0"}}},"backgroundColor":"blue","textColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1300px"}} -->
+<div class="wp-block-group has-base-color has-blue-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--60);padding-right:0;padding-bottom:var(--wp--preset--spacing--60);padding-left:0"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group"><!-- wp:image {"id":85,"width":"300px","sizeSlug":"full","linkDestination":"none"} -->
+		<figure class="wp-block-image size-full is-resized"><img src="http://newagenzianolana.local/wp-content/uploads/2025/04/logo-white-1.png" alt="" class="wp-image-85" style="width:300px" /></figure>
+		<!-- /wp:image -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:separator {"className":"is-style-default","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"backgroundColor":"base"} -->
+	<hr class="wp-block-separator has-text-color has-base-color has-alpha-channel-opacity has-base-background-color has-background is-style-default" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)" />
+	<!-- /wp:separator -->
+
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"top"}} -->
+	<div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"left","flexWrap":"wrap"}} -->
+		<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|60"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+			<div class="wp-block-group" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:heading {"fontSize":"medium"} -->
+				<h2 class="wp-block-heading has-medium-font-size">Contatti</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+				<div class="wp-block-group"><!-- wp:heading {"level":6} -->
+					<h6 class="wp-block-heading">Comune di Lorem Lorem</h6>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>Via Roma 0 - 0000 Lorem Ipsum Codice Fiscale / P.IVA:</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p>00000000</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:group -->
+
+				<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"fontSize":"small","layout":{"type":"flex","orientation":"vertical"}} -->
+				<div class="wp-block-group has-small-font-size"><!-- wp:read-more {"content":"Posta Elettronica Certificata","className":"footermenu"} /-->
+
+					<!-- wp:read-more {"content":"URP - Ufficio Relazioni con il Pubblico","className":"footermenu"} /-->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center"}} -->
+		<div class="wp-block-group"><!-- wp:heading {"level":6} -->
+			<h6 class="wp-block-heading">Seguici Su</h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:social-links {"iconColor":"base","iconColorValue":"#ffffff","className":"is-style-logos-only","style":{"spacing":{"margin":{"right":"0","left":"0"}}}} -->
+			<ul class="wp-block-social-links has-icon-color is-style-logos-only" style="margin-right:0;margin-left:0"><!-- wp:social-link {"url":"hjgj","service":"facebook"} /-->
+
+				<!-- wp:social-link {"url":"fdghdf","service":"x"} /-->
+
+				<!-- wp:social-link {"url":"dfhggf","service":"youtube"} /-->
+			</ul>
+			<!-- /wp:social-links -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"right":"0","left":"0","top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"blockGap":"0"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"dark-blue","textColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1300px"}} -->
+<div class="wp-block-group has-base-color has-dark-blue-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group"><!-- wp:navigation {"ref":77, className:"bottomfootermenu"} /--></div>
+	<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
