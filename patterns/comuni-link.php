@@ -3,6 +3,7 @@
 /**
  * Title: Comuni link
  * Slug: pa-centrale/comuni-link
+ * Category: pa-centrale
  * Description: Comuni link
  * 
  * 

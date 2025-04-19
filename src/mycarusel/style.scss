@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// .wp-block-myblocks-mycarusel {
+// 	background-color: #21759b;
+// 	color: #fff;
+// 	padding: 2px;
+// }
+.carusel-slide-inner {
+	padding: 1rem;
+	background: #f9f9f9;
+	border-radius: 12px;
+	text-align: center;
+}
+.carusel-img img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+.carusel-title {
+	margin-top: 1rem;
+	font-size: 1.25rem;
+}
+.carusel-excerpt {
+	font-size: 0.9rem;
+	color: #555;
+}

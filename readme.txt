@@ -1,67 +1,55 @@
-=== PA Centrale ===
-Contributors: adinfo
-Tested up to: 6.4
-Requires at least: 6.4
-Requires PHP: 7.4
-Version: 100.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Copyright: adinfo
+=== Search ===
+Contributors:      The WordPress Contributors
+Tags:              block
+Tested up to:      6.7
+Stable tag:        0.1.0
+License:           GPL-2.0-or-later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-A full site editing theme. Basic version.
+Example block scaffolded with Create Block tool.
 
-== Guide ==
+== Description ==
 
-=== Folder structure ===
+This is the long description. No limit, and you can use Markdown (as well as in the following sections).
 
-- Assets. Images and CSS files.
-- Parts. HTML template parts.
-- Patterns. Block patterns.
-- Templates. HTML block templates.
+For backwards compatibility, if this section is missing, the full length of the short description will be used, and
+Markdown parsed.
 
-functions.php -Used to enqueue styles and add theme support.
-index.php     -"Silence is golden".
-style.css     -Required to activate the theme.
-theme.json    -Settings and default styles.
-license.txt   -GPL v2
-readme.txt    -Information about the theme.
-screenshot.png
+== Installation ==
+
+This section describes how to install the plugin and get it working.
+
+e.g.
+
+1. Upload the plugin files to the `/wp-content/plugins/search` directory, or install the plugin through the WordPress plugins screen directly.
+1. Activate the plugin through the 'Plugins' screen in WordPress
+
+
+== Frequently Asked Questions ==
+
+= A question that someone might have =
+
+An answer to that question.
+
+= What about foo bar? =
+
+Answer to foo bar dilemma.
+
+== Screenshots ==
+
+1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
+the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
+directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
+(or jpg, jpeg, gif).
+2. This is the second screen shot
 
 == Changelog ==
-For changelogs please see the Github repository.
 
-1.0.0 Initial release
+= 0.1.0 =
+* Release
 
-== Licence ==
-PA Centrale is distributed under the terms of the GNU GPL.
+== Arbitrary section ==
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-== Resources used to build this theme ==
-
-* Twenty Twenty-Two WordPress theme (C) WordPress.org
-License: GNU General Public License v2.0 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-* Q WordPress theme (C) Ari Stathopoulos
-License: GNU General Public License v2.0 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-* Full site editing starter theme by Carolina Nymark
-https://fullsiteediting.com
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-Images
-Images from pxhere.com. Public domain:
-https://pxhere.com/en/photo/927190 -woman with curly hair
-https://pxhere.com/en/photo/1049910 -woman with t-shirt
-https://pxhere.com/en/photo/1604358 -woman with headphones
+You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
+plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
+"installation." Arbitrary sections will be shown below the built-in sections outlined above.

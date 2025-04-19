@@ -4,7 +4,8 @@
  * Title: Arrow link
  * Slug: pa-centrale/arrow-link
  * Description: Arrow link
- * Inserter: no
+ * Category: pa-centrale
+ * 
  * 
  *
  * @package pa-centrale

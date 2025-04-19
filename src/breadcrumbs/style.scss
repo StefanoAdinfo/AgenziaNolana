@@ -1,0 +1,24 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// .wp-block-mytheme-breadcrumbs {
+// 	background-color: #21759b;
+// 	color: #fff;
+// 	padding: 2px;
+// }
+
+.custom-breadcrumb {
+	font-size: 14px;
+	margin-bottom: 1rem;
+}
+.custom-breadcrumb a {
+	text-decoration: none;
+	color: #0073aa;
+}
+.custom-breadcrumb span {
+	color: #555;
+}
