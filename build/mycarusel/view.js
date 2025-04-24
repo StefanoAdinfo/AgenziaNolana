@@ -1,3 +1,7 @@
+/******/ (() => { // webpackBootstrap
+/*!*******************************!*\
+  !*** ./src/mycarusel/view.js ***!
+  \*******************************/
 /**
  * Use this file for JavaScript code that you want to run in the front-end
  * on posts/pages that contain this block.
@@ -19,3 +23,6 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

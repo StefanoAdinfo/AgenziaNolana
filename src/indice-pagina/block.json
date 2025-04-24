@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "myblocks/indice-pagina",
+	"version": "0.1.0",
+	"title": "Indice Pagina",
+	"category": "widgets",
+	"icon": "list-view",
+	"description": "Mostra un indice delle sezioni con navigazione attiva.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "indice-pagina",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

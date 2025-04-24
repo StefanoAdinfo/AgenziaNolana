@@ -19,7 +19,7 @@
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './editor.scss';
+import "./editor.scss";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -30,23 +30,23 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
 import {
 	PanelBody,
 	ToggleControl,
 	SelectControl,
 	RangeControl,
-} from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
-import { __ } from '@wordpress/i18n';
+} from "@wordpress/components";
+import { useSelect } from "@wordpress/data";
+import { __ } from "@wordpress/i18n";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit({ attributes, setAttributes }) {
 	const {
 		postType,
 		showTitle,
@@ -60,137 +60,113 @@ export default function Edit( { attributes, setAttributes } ) {
 		attributes.showTitle,
 		attributes.showExcerpt,
 		attributes.showFeaturedImage,
-	].filter( Boolean ).length;
+	].filter(Boolean).length;
 
 	const posts = useSelect(
-		( select ) =>
-			select( 'core' ).getEntityRecords( 'postType', postType, {
+		(select) =>
+			select("core").getEntityRecords("postType", postType, {
 				per_page: 10,
 				_embed: true, // Per featured image
-			} ),
-		[ postType ]
+			}),
+		[postType],
 	);
 
 	const blockProps = useBlockProps();
 
 	return (
-		<div { ...blockProps }>
+		<div {...blockProps}>
 			<InspectorControls>
-				<PanelBody title="Impostazioni Carousel" initialOpen={ true }>
+				<PanelBody title="Impostazioni Carousel" initialOpen={true}>
 					<SelectControl
 						label="Tipo di post"
-						value={ postType }
-						options={ [
-							{ label: 'Post', value: 'post' },
-							{ label: 'Pagine', value: 'page' },
-							{ label: 'Foto', value: 'foto' }, // CPT
-						] }
-						onChange={ ( val ) =>
-							setAttributes( { postType: val } )
-						}
+						value={postType}
+						options={[
+							{ label: "Post", value: "post" },
+							{ label: "Pagine", value: "page" },
+							{ label: "Foto", value: "foto" }, // CPT
+						]}
+						onChange={(val) => setAttributes({ postType: val })}
 					/>
 					<ToggleControl
 						label="Autoplay"
-						checked={ autoplay }
-						onChange={ ( val ) =>
-							setAttributes( { autoplay: val } )
-						}
+						checked={autoplay}
+						onChange={(val) => setAttributes({ autoplay: val })}
 					/>
 					<RangeControl
 						label="Slide per visualizzazione"
-						value={ slidesPerView }
-						onChange={ ( val ) =>
-							setAttributes( { slidesPerView: val } )
-						}
-						min={ 1 }
-						max={ 5 }
+						value={slidesPerView}
+						onChange={(val) => setAttributes({ slidesPerView: val })}
+						min={1}
+						max={5}
 					/>
 					<ToggleControl
 						label="Mostra titolo"
-						checked={ attributes.showTitle }
-						onChange={ ( val ) =>
-							setAttributes( { showTitle: val } )
-						}
-						disabled={
-							attributes.showTitle && activeOptionsCount === 1
-						}
+						checked={attributes.showTitle}
+						onChange={(val) => setAttributes({ showTitle: val })}
+						disabled={attributes.showTitle && activeOptionsCount === 1}
 					/>
 
 					<ToggleControl
 						label="Mostra excerpt"
-						checked={ attributes.showExcerpt }
-						onChange={ ( val ) =>
-							setAttributes( { showExcerpt: val } )
-						}
-						disabled={
-							attributes.showExcerpt && activeOptionsCount === 1
-						}
+						checked={attributes.showExcerpt}
+						onChange={(val) => setAttributes({ showExcerpt: val })}
+						disabled={attributes.showExcerpt && activeOptionsCount === 1}
 					/>
 
 					<ToggleControl
 						label="Mostra immagine in evidenza"
-						checked={ attributes.showFeaturedImage }
-						onChange={ ( val ) =>
-							setAttributes( { showFeaturedImage: val } )
-						}
-						disabled={
-							attributes.showFeaturedImage &&
-							activeOptionsCount === 1
-						}
+						checked={attributes.showFeaturedImage}
+						onChange={(val) => setAttributes({ showFeaturedImage: val })}
+						disabled={attributes.showFeaturedImage && activeOptionsCount === 1}
 					/>
 				</PanelBody>
 			</InspectorControls>
 
-			{ posts ? (
+			{posts ? (
 				<Swiper
-					modules={ [ Navigation, Pagination, Autoplay ] }
-					spaceBetween={ 20 }
-					slidesPerView={ slidesPerView }
+					modules={[Navigation, Pagination, Autoplay]}
+					spaceBetween={20}
+					slidesPerView={slidesPerView}
 					navigation
-					pagination={ { clickable: true } }
-					autoplay={ autoplay ? { delay: 3000 } : false }
+					pagination={{ clickable: true }}
+					// autoplay={ autoplay ? { delay: 3000 } : false }
+					autoplay={false}
 				>
-					{ posts.map( ( post ) => (
-						<SwiperSlide key={ post.id }>
+					{posts.map((post) => (
+						<SwiperSlide key={post.id}>
 							<div className="swiper-card">
-								{ showFeaturedImage &&
-									post._embedded?.[
-										'wp:featuredmedia'
-									]?.[ 0 ]?.source_url && (
+								{showFeaturedImage &&
+									post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
 										<img
-											src={
-												post._embedded[
-													'wp:featuredmedia'
-												][ 0 ].source_url
-											}
-											alt={ post.title?.rendered || '' }
-											style={ {
-												width: '100%',
-												height: 'auto',
-											} }
+											src={post._embedded["wp:featuredmedia"][0].source_url}
+											alt={post.title?.rendered || ""}
+											style={{
+												width: "100%",
+												height: "auto",
+											}}
 										/>
-									) }
+									)}
 
-								{ showTitle && post.title?.rendered && (
-									<h3>{ post.title.rendered }</h3>
-								) }
+								{showTitle && post.title?.rendered && (
+									<h3>{post.title.rendered}</h3>
+								)}
 
-								{ showExcerpt &&
+								{showExcerpt &&
 									post.excerpt?.rendered &&
-									post.excerpt.rendered.trim() !== '' && (
+									post.excerpt.rendered.trim() !== "" && (
 										<p
-											dangerouslySetInnerHTML={ {
+											dangerouslySetInnerHTML={{
 												__html: post.excerpt.rendered,
-											} }
+											}}
 										/>
-									) }
+									)}
 							</div>
 						</SwiperSlide>
-					) ) }
+					))}
 				</Swiper>
 			) : (
 				<p>Caricamento o nessun post trovato.</p>
-			) }
+			)}
 		</div>
 	);
 }

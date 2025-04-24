@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "myblocks/modale",
+  "version": "0.1.0",
+  "title": "Modale",
+  "category": "widgets",
+  "icon": "format-image",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": false,
+    "inserter": true,
+    "reusable": true,
+    "anchor": true,
+    "align": true,
+    "alignWide": true,
+    "alignFull": true,
+    "color": {
+      "background": true,
+      "text": true,
+      "link": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "letterSpacing": true
+    },
+    "customClassName": true,
+    "customStyles": true,
+    "customSpacing": true,
+    "customColor": true,
+    "customTypography": true,
+    "customLayout": true,
+    "customDimensions": true,
+    "customPosition": true,
+    "customBorder": true,
+    "customGradient": true,
+    "customUnits": true,
+    "customBackground": true,
+    "customTextColor": true,
+    "customTextShadow": true,
+    "customTextDecoration": true,
+    "customTextTransform": true
+  },
+  "textdomain": "modale",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

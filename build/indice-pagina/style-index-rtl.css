@@ -1,0 +1,82 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/indice-pagina/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.prova {
+  border-right: 1px solid #0066cc;
+}
+
+.indice-wrapper {
+  padding: 1rem;
+}
+
+.indice-bar {
+  height: 4px;
+  background-color: #e9e6f2;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.indice-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #0066cc;
+  transition: width 0.5s ease-in-out;
+}
+
+.indice-list {
+  list-style: none;
+  padding-right: 0;
+  margin: 0;
+}
+
+.indice-item {
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #0066cc;
+  font-size: 1.2rem;
+}
+
+.indice-item a {
+  color: #0066cc;
+}
+
+.indice-item a:hover {
+  color: #004d99;
+}
+
+.indice-item::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.25rem;
+  height: 1.5rem;
+  width: 2px;
+  background-color: transparent;
+}
+
+.indice-item.active::before {
+  background-color: #0066cc;
+}
+
+.indice-title {
+  color: #0066cc;
+  background-color: transparent !important;
+}
+
+.accordion-button.indice-title:not(.collapsed) {
+  background-color: transparent !important;
+  color: #0066cc;
+  box-shadow: none;
+}
+
+.accordion-button.indice-title {
+  border: none;
+}

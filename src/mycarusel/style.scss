@@ -11,7 +11,8 @@
 // 	padding: 2px;
 // }
 .carusel-slide-inner {
-	padding: 1rem;
+	padding: 5px;
+	margin: 5px;
 	background: #f9f9f9;
 	border-radius: 12px;
 	text-align: center;
@@ -20,6 +21,9 @@
 	width: 100%;
 	height: auto;
 	border-radius: 8px;
+}
+.carusel-img img:hover {
+	cursor: pointer;
 }
 .carusel-title {
 	margin-top: 1rem;

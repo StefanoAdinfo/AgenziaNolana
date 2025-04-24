@@ -280,6 +280,7 @@ function myblocks_block_init()
 	register_block_type(__DIR__ . '/build/mycarusel');
 	register_block_type(__DIR__ . '/build/breadcrumbs');
 	register_block_type(__DIR__ . '/build/search');
+	register_block_type(__DIR__ . '/build/indice-pagina');
 }
 add_action('init', 'myblocks_block_init');
 
@@ -341,3 +342,21 @@ function custom_news_search_callback()
 
 	wp_send_json($response);
 }
+
+
+// get the acf tramite shortcode
+
+function mostra_acf($atts)
+{
+	$atts = shortcode_atts([
+		'campo' => '',
+		'id' => get_the_ID(),
+	], $atts);
+
+	if (function_exists('get_field') && $atts['campo']) {
+		return get_field($atts['campo'], $atts['id']);
+	}
+
+	return '';
+}
+add_shortcode('acf_field', 'mostra_acf');
