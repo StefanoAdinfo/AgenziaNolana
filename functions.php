@@ -291,57 +291,243 @@ add_action('init', 'myblocks_block_init');
 add_action('wp_ajax_custom_news_search', 'custom_news_search_callback');
 add_action('wp_ajax_nopriv_custom_news_search', 'custom_news_search_callback');
 
+// function custom_news_search_callback()
+// {
+
+// 	// Verifica che esista un valore passato e lo sanitizza
+// 	$term = isset($_GET['term']) ? sanitize_text_field($_GET['term']) : '';
+// 	$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+// 	$per_page = 10;
+
+// 	if (empty($term)) {
+// 		wp_send_json([]); // oppure wp_send_json(array());
+// 		return;
+// 	}
+
+// 	// Dico su quale cpt fare la query
+// 	$args = array(
+// 		'post_type' => 'news',
+// 		's' => $term,
+// 		'posts_per_page' => $per_page,
+// 		'paged' => $page,
+// 		'post_status' => 'publish',
+// 	);
+
+// 	$args = array(
+// 		'post_type' => 'servizi',
+// 		's' => $term,
+// 		'posts_per_page' => $per_page,
+// 		'paged' => $page,
+// 		'post_status' => 'publish',
+// 	);
+
+// 	$query = new WP_Query($args);
+
+// 	$results = array();
+
+
+// 	// Inserico i risultati in un array con solo titolo
+// 	if ($query->have_posts()) {
+// 		while ($query->have_posts()) {
+// 			$query->the_post();
+// 			$results[] = array(
+// 				'title' => get_the_title(),
+// 				'link' => get_permalink(),
+// 			);
+// 		}
+// 	}
+// 	// e lo restituisco in formato JSON
+// 	// wp_send_json($results) è una funzione di WordPress che invia una risposta JSON al client
+// 	// e termina l'esecuzione dello script
+
+// 	wp_reset_postdata();
+
+// 	$response = array(
+// 		'posts' => $results,
+// 		'filtri' => $filterArray,
+// 		'current_page' => $page,
+// 		'max_num_pages' => $query->max_num_pages,
+// 	);
+
+// 	wp_send_json($response);
+// }
+
+
+
+
+// Query di ricerca su piu cpt
+
+// function custom_news_search_callback()
+// {
+// 	$term = isset($_GET['term']) ? sanitize_text_field($_GET['term']) : '';
+// 	$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+// 	$post_type_filter = isset($_GET['post_type']) ? sanitize_text_field($_GET['post_type']) : '';
+
+// 	$per_page = 4;
+
+// 	if (empty($term)) {
+// 		wp_send_json([]);
+// 		return;
+// 	}
+
+// 	$post_types = ['news', 'servizi'];
+// 	$results = [];
+// 	$filterArray = [];
+// 	$max_num_pages = 1;
+
+// 	foreach ($post_types as $post_type) {
+// 		$args = array(
+// 			'post_type' => $post_type,
+// 			's' => $term,
+// 			'posts_per_page' => ($post_type_filter && $post_type !== $post_type_filter) ? 1 : $per_page,
+// 			'paged' => $page,
+// 			'post_status' => 'publish',
+// 		);
+
+// 		$query = new WP_Query($args);
+
+// 		// Sempre aggiungere il filtro, anche se non ci sono risultati
+// 		$filterArray[] = array(
+// 			'name' => $post_type,
+// 			'count' => $query->found_posts,
+// 		);
+
+// 		// Se è il post_type selezionato, allora prendi i post
+// 		if (!$post_type_filter || $post_type_filter === $post_type) {
+// 			if ($query->have_posts()) {
+// 				while ($query->have_posts()) {
+// 					$query->the_post();
+// 					$results[] = array(
+// 						'title' => get_the_title(),
+// 						'link' => get_permalink(),
+// 						'post_type' => $post_type,
+// 					);
+// 				}
+// 			}
+// 			$max_num_pages = $query->max_num_pages;
+// 		}
+
+// 		wp_reset_postdata();
+// 	}
+
+// 	$response = array(
+// 		'posts' => $results,
+// 		'filtri' => $filterArray,
+// 		'current_page' => $page,
+// 		'max_num_pages' => $max_num_pages,
+// 	);
+
+// 	wp_send_json($response);
+// }
+
+
+
+// Query di ricerca su piu cpt basata sul titolo di essi
 function custom_news_search_callback()
 {
-
-	// Verifica che esista un valore passato e lo sanitizza
 	$term = isset($_GET['term']) ? sanitize_text_field($_GET['term']) : '';
 	$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-	$per_page = 10;
+	$post_type_filter = isset($_GET['post_type']) ? sanitize_text_field($_GET['post_type']) : '';
+
+	$per_page = 4;
 
 	if (empty($term)) {
-		wp_send_json([]); // oppure wp_send_json(array());
+		wp_send_json([]);
 		return;
 	}
 
-	// Dico su quale cpt fare la query
-	$args = array(
-		'post_type' => 'news',
-		's' => $term,
-		'posts_per_page' => $per_page,
-		'paged' => $page,
-		'post_status' => 'publish',
-	);
-
-	$query = new WP_Query($args);
-
-	$results = array();
+	$post_types = ['news', 'servizi'];
+	$results = [];
+	$filterArray = [];
+	$max_num_pages = 1; // Default
 
 
-	// Inserico i risultati in un array con solo titolo
-	if ($query->have_posts()) {
-		while ($query->have_posts()) {
-			$query->the_post();
-			$results[] = array(
-				'title' => get_the_title(),
-				'link' => get_permalink(),
-			);
-		}
-	}
-	// e lo restituisco in formato JSON
-	// wp_send_json($results) è una funzione di WordPress che invia una risposta JSON al client
-	// e termina l'esecuzione dello script
-
-	wp_reset_postdata();
 
 	$response = array(
 		'posts' => $results,
+		'filtri' => $filterArray,
 		'current_page' => $page,
-		'max_num_pages' => $query->max_num_pages,
+		'max_num_pages' => $max_num_pages,
+	);
+
+
+	// Definisci il filtro per cercare solo sui titoli
+	$search_by_title_only = function ($search, $wp_query) {
+		global $wpdb;
+
+		if (empty($search)) {
+			return $search;
+		}
+
+		$q = $wp_query->query_vars;
+		$n = !empty($q['exact']) ? '' : '%';
+
+		$search_terms = $q['search_terms'];
+		$search = '';
+
+		foreach ($search_terms as $term) {
+			$term = esc_sql($wpdb->esc_like($term));
+			$search .= " AND {$wpdb->posts}.post_title LIKE '{$n}{$term}{$n}'";
+		}
+
+		return $search;
+	};
+
+	// Applica il filtro SOLO per questa ricerca
+	add_filter('posts_search', $search_by_title_only, 10, 2);
+
+	foreach ($post_types as $post_type) {
+
+
+		$args = array(
+			'post_type' => $post_type,
+			's' => $term,
+			'posts_per_page' => ($post_type_filter && $post_type !== $post_type_filter) ? 1 : $per_page,
+			'paged' => $page,
+			'post_status' => 'publish',
+		);
+
+		$query = new WP_Query($args);
+
+		// Sempre aggiungere il filtro, anche se non ci sono risultati
+		$filterArray[] = array(
+			'name' => $post_type,
+			'count' => $query->found_posts,
+		);
+
+
+		// Se è il post_type selezionato, allora prendi i post
+		if (!$post_type_filter || $post_type_filter === $post_type) {
+			if ($query->have_posts()) {
+				while ($query->have_posts()) {
+					$query->the_post();
+					$results[] = array(
+						'title' => get_the_title(),
+						'link' => get_permalink(),
+						'post_type' => $post_type,
+					);
+				}
+			}
+			$max_num_pages = $query->max_num_pages;
+		}
+
+		wp_reset_postdata();
+	}
+
+	// Rimuovi il filtro dopo che hai fatto la ricerca
+	remove_filter('posts_search', $search_by_title_only, 10);
+
+	$response = array(
+		'posts' => $results,
+		'filtri' => $filterArray,
+		'current_page' => $page,
+		'max_num_pages' => $max_num_pages,
 	);
 
 	wp_send_json($response);
 }
+
+
 
 
 // get the acf tramite shortcode

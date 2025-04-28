@@ -5,6 +5,7 @@ wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bun
 
 // Attributi
 $post_type            = $attributes['postType'] ?? 'post';
+$max_slides           = $attributes['maxSlides'] ?? 5;
 $show_title           = $attributes['showTitle'] ?? true;
 $show_excerpt         = $attributes['showExcerpt'] ?? true;
 $show_featured_image  = $attributes['showFeaturedImage'] ?? true;
@@ -14,7 +15,7 @@ $slides_per_view      = $attributes['slidesPerView'] ?? 1;
 // Query CPT
 $query = new WP_Query([
 	'post_type'      => $post_type,
-	'posts_per_page' => -1,
+	'posts_per_page' => $max_slides,
 ]);
 
 if (!$query->have_posts()) {

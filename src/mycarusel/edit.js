@@ -52,6 +52,7 @@ export default function Edit({ attributes, setAttributes }) {
 		showTitle,
 		showExcerpt,
 		showFeaturedImage,
+		Maxslides,
 		autoplay,
 		slidesPerView,
 	} = attributes;
@@ -60,15 +61,17 @@ export default function Edit({ attributes, setAttributes }) {
 		attributes.showTitle,
 		attributes.showExcerpt,
 		attributes.showFeaturedImage,
+		attributes.Maxslides,
 	].filter(Boolean).length;
 
+	// serve per effettuare la query per ottenere i post
 	const posts = useSelect(
 		(select) =>
 			select("core").getEntityRecords("postType", postType, {
-				per_page: 10,
+				per_page: Maxslides, // Maxslides
 				_embed: true, // Per featured image
 			}),
-		[postType],
+		[postType, Maxslides],
 	);
 
 	const blockProps = useBlockProps();
@@ -81,11 +84,17 @@ export default function Edit({ attributes, setAttributes }) {
 						label="Tipo di post"
 						value={postType}
 						options={[
-							{ label: "Post", value: "post" },
-							{ label: "Pagine", value: "page" },
+							{ label: "Video", value: "video" },
 							{ label: "Foto", value: "foto" }, // CPT
 						]}
 						onChange={(val) => setAttributes({ postType: val })}
+					/>
+					<RangeControl
+						label="Numero di post da visualizzare "
+						value={Maxslides}
+						onChange={(val) => setAttributes({ Maxslides: val })}
+						min={5}
+						max={10}
 					/>
 					<ToggleControl
 						label="Autoplay"
@@ -97,9 +106,13 @@ export default function Edit({ attributes, setAttributes }) {
 						value={slidesPerView}
 						onChange={(val) => setAttributes({ slidesPerView: val })}
 						min={1}
-						max={5}
+						max={Math.max(
+							3,
+							posts?.length && posts.length < 3 ? posts.length : 3,
+						)}
 					/>
-					<ToggleControl
+
+					{/* <ToggleControl
 						label="Mostra titolo"
 						checked={attributes.showTitle}
 						onChange={(val) => setAttributes({ showTitle: val })}
@@ -111,7 +124,7 @@ export default function Edit({ attributes, setAttributes }) {
 						checked={attributes.showExcerpt}
 						onChange={(val) => setAttributes({ showExcerpt: val })}
 						disabled={attributes.showExcerpt && activeOptionsCount === 1}
-					/>
+					/> */}
 
 					<ToggleControl
 						label="Mostra immagine in evidenza"

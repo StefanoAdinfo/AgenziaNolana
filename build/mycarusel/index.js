@@ -11388,7 +11388,7 @@ __webpack_require__.r(__webpack_exports__);
   \**********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/mycarusel","version":"0.1.0","title":"Mycarusel","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"postType":{"type":"string","default":"post"},"showTitle":{"type":"boolean","default":true},"showExcerpt":{"type":"boolean","default":false},"showFeaturedImage":{"type":"boolean","default":true},"autoplay":{"type":"boolean","default":true},"slidesPerView":{"type":"number","default":1}},"textdomain":"mycarusel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/mycarusel","version":"0.1.0","title":"Mycarusel","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"postType":{"type":"string","default":"post"},"Maxslides":{"type":"number","default":5},"showTitle":{"type":"boolean","default":true},"showExcerpt":{"type":"boolean","default":false},"showFeaturedImage":{"type":"boolean","default":true},"autoplay":{"type":"boolean","default":true},"slidesPerView":{"type":"number","default":1}},"textdomain":"mycarusel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ }),
 
@@ -11469,14 +11469,18 @@ function Edit({
     showTitle,
     showExcerpt,
     showFeaturedImage,
+    Maxslides,
     autoplay,
     slidesPerView
   } = attributes;
-  const activeOptionsCount = [attributes.showTitle, attributes.showExcerpt, attributes.showFeaturedImage].filter(Boolean).length;
+  const activeOptionsCount = [attributes.showTitle, attributes.showExcerpt, attributes.showFeaturedImage, attributes.Maxslides].filter(Boolean).length;
+
+  // serve per effettuare la query per ottenere i post
   const posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select("core").getEntityRecords("postType", postType, {
-    per_page: 10,
+    per_page: Maxslides,
+    // Maxslides
     _embed: true // Per featured image
-  }), [postType]);
+  }), [postType, Maxslides]);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
     ...blockProps,
@@ -11488,11 +11492,8 @@ function Edit({
           label: "Tipo di post",
           value: postType,
           options: [{
-            label: "Post",
-            value: "post"
-          }, {
-            label: "Pagine",
-            value: "page"
+            label: "Video",
+            value: "video"
           }, {
             label: "Foto",
             value: "foto"
@@ -11501,6 +11502,14 @@ function Edit({
           onChange: val => setAttributes({
             postType: val
           })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+          label: "Numero di post da visualizzare ",
+          value: Maxslides,
+          onChange: val => setAttributes({
+            Maxslides: val
+          }),
+          min: 5,
+          max: 10
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
           label: "Autoplay",
           checked: autoplay,
@@ -11514,21 +11523,7 @@ function Edit({
             slidesPerView: val
           }),
           min: 1,
-          max: 5
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          label: "Mostra titolo",
-          checked: attributes.showTitle,
-          onChange: val => setAttributes({
-            showTitle: val
-          }),
-          disabled: attributes.showTitle && activeOptionsCount === 1
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          label: "Mostra excerpt",
-          checked: attributes.showExcerpt,
-          onChange: val => setAttributes({
-            showExcerpt: val
-          }),
-          disabled: attributes.showExcerpt && activeOptionsCount === 1
+          max: Math.max(3, posts?.length && posts.length < 3 ? posts.length : 3)
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
           label: "Mostra immagine in evidenza",
           checked: attributes.showFeaturedImage,

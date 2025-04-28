@@ -21,8 +21,16 @@
 	height: 50px;
 }
 .close-btn {
-	fill: black; /* Cambia colore al passaggio del mouse */
+	fill: black; /* Cambia colore al passaggio del mouse sulla x */
 }
 .close-btn:hover {
-	fill: red; /* Cambia colore al passaggio del mouse */
+	fill: red; /* Cambia colore al passaggio del mouse sulla x */
+}
+.disabled {
+	cursor: not-allowed;
+	color: #6c757d !important;
+}
+
+.clickable {
+	cursor: pointer;
 }

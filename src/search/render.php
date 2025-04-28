@@ -73,11 +73,24 @@
 			</div>
 
 
-			<!-- Risultati statici -->
-			<div id="searchResults" class="mt-3">
-				<p class="text-muted">Inserisci un termine di ricerca</p>
+			<div class="container my-5">
+				<div id="noResults">
+					<p class="text-muted">Inserisci un termine di ricerca</p>
+				</div>
+				<div class="row">
+					<!-- Filtro cpt -->
+					<div class="col-md-4">
+						<div id="searchFilters"></div>
+					</div>
+
+					<div class="col-md-8">
+						<!-- Risultati -->
+						<div id="searchResults"></div>
+						<div id="pagination" class="mt-3 text-center"></div>
+					</div>
+				</div>
 			</div>
-			<div id="pagination" class="mt-3 text-center"></div>
+
 		</div>
 	</div>
 

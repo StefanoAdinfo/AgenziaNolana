@@ -123,6 +123,10 @@ return array(
 				'type' => 'string',
 				'default' => 'post'
 			),
+			'Maxslides' => array(
+				'type' => 'number',
+				'default' => 5
+			),
 			'showTitle' => array(
 				'type' => 'boolean',
 				'default' => true
