@@ -2,13 +2,13 @@
 
 /**
  * Title: Arrow link
- * Slug: pa-centrale/arrow-link
+ * Slug: agenzia-nolana/arrow-link
  * Description: Arrow link
- * Category: pa-centrale
+ * Category: agenzia-nolana
  * 
  * 
  *
- * @package pa-centrale
+ * @package agenzia-nolana
  * @since 1.0.0
  */
 ?>

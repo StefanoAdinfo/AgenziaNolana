@@ -2,13 +2,13 @@
 
 /**
  * Title: Archive Foto Video
- * Slug: pa-centrale/archive-foto-video
+ * Slug: agenzia-nolana/archive-foto-video
  * Description: Archive page for Foto Video
- * Category: pa-centrale
+ * Category: agenzia-nolana
  * 
  * 
  *
- * @package pa-centrale
+ * @package agenzia-nolana
  * @since 1.0.0
  */
 ?>
@@ -17,7 +17,7 @@
 <div class="wp-block-group"><!-- wp:query {"queryId":19,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[],"format":[]}} -->
     <div class="wp-block-query">
         <!-- wp:post-template -->
-        <!-- wp:pattern {"slug":"pa-centrale/foto-video-card"} /-->
+        <!-- wp:pattern {"slug":"agenzia-nolana/foto-video-card"} /-->
         <!-- /wp:post-template -->
 
         <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->

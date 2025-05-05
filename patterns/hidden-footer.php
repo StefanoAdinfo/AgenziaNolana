@@ -2,10 +2,10 @@
 
 /**
  * Title: Footer
- * Slug: pa-centrale/hidden-footer
+ * Slug: agenzia-nolana/hidden-footer
  * Inserter: no
  *
- * @package pa-centrale
+ * @package agenzia-nolana
  * @since 1.0.0
  */
 ?>

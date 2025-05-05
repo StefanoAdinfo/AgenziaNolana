@@ -2,13 +2,13 @@
 
 /**
  * Title: Servizi link
- * Slug: pa-centrale/servizi-link
- * Category: pa-centrale
+ * Slug: agenzia-nolana/servizi-link
+ * Category: agenzia-nolana
  * Description: Servizi link
  * 
  * 
  *
- * @package pa-centrale
+ * @package agenzia-nolana
  * @since 1.0.0
  */
 ?>
@@ -25,7 +25,7 @@
 
 
                 <!-- wp:post-template -->
-                <!-- wp:pattern {"slug":"pa-centrale/arrow-link"} /-->
+                <!-- wp:pattern {"slug":"agenzia-nolana/arrow-link"} /-->
                 <!-- /wp:post-template -->
 
 

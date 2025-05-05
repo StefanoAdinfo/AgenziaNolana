@@ -2,13 +2,13 @@
 
 /**
  * Title: Archive Agenzia
- * Slug: pa-centrale/archive-agenzia
+ * Slug: agenzia-nolana/archive-agenzia
  * Description: Archive page for Agenzia
- * Category: pa-centrale
+ * Category: agenzia-nolana
  * 
  * 
  *
- * @package pa-centrale
+ * @package agenzia-nolana
  * @since 1.0.0
  */
 ?>
@@ -17,6 +17,6 @@
 
 <!-- wp:query {"query":{"postType":"agenzia","perPage":6}} -->
 <!-- wp:post-template -->
-<!-- wp:pattern {"slug":"pa-centrale/card-content-img"} -->
+<!-- wp:pattern {"slug":"agenzia-nolana/card-content-img"} -->
 <!-- /wp:post-template -->
 <!-- /wp:query -->

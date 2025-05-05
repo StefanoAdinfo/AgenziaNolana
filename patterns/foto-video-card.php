@@ -2,13 +2,13 @@
 
 /**
  * Title: Foto Video Card
- * Slug: pa-centrale/foto-video-card
+ * Slug: agenzia-nolana/foto-video-card
  * Description: Card with image and description
- * Category: pa-centrale
+ * Category: agenzia-nolana
  * 
  * 
  *
- * @package pa-centrale
+ * @package agenzia-nolana
  * @since 1.0.0
  */
 ?>

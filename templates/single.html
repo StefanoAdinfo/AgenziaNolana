@@ -1,40 +1,412 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"agenzia-nolana","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"metadata":{"name":"Breadcumbs"},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:mytheme/breadcrumbs /--></div>
+<!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->
-<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)">
+<main
+	class="wp-block-group"
+	style="
+		padding-top: var(--wp--preset--spacing--60);
+		padding-bottom: var(--wp--preset--spacing--50);
+	"
+>
 	<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignfull">
-		<!-- wp:post-title {"level":1} /-->
-		<!-- wp:pattern {"slug":"pa-centrale/hidden-post-meta"} /-->
-	</div>
-	<!-- /wp:group -->
-	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
-	<!-- wp:spacer {"height":"1rem"} -->
-	<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:post-terms {"term":"post_tag","prefix":"Tags: "} /-->
-		<!-- wp:separator {"backgroundColor":"secondary"} -->
-		<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background"/>
-		<!-- /wp:separator -->
-	</div>
-	<!-- wp:spacer {"height":"1rem"} -->
-	<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->
-	<!-- /wp:group -->
-	<!-- wp:pattern {"slug":"pa-centrale/comments"} /-->
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
-		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
-			<!-- wp:post-navigation-link {"type":"previous","showTitle":true,"linkLabel":true,"arrow":"arrow"} /-->
-			<!-- wp:post-navigation-link {"showTitle":true,"linkLabel":true,"arrow":"arrow"} /-->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+		<div class="wp-block-group">
+			<!-- wp:post-title {"textAlign":"left","level":1,"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|80","top":"var:preset|spacing|20"}}}} /-->
+
+			<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"left","verticalAlignment":"top"}} -->
+			<div class="wp-block-group" style="margin-top: 0">
+				<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group">
+					<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","padding":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+					<div class="wp-block-group" style="padding-top: 0; padding-bottom: 0">
+						<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|20"}}},"layout":{"type":"constrained"}} -->
+						<div
+							class="wp-block-group"
+							style="padding-bottom: var(--wp--preset--spacing--20)"
+						>
+							<!-- wp:safe-svg/svg-icon {"svgURL":"http://localhost:10028/wp-content/uploads/2025/04/condividi.svg","imageID":643,"imageWidth":3003,"imageHeight":3003,"dimensionWidth":24,"dimensionHeight":24,"imageSizes":{"full":{"height":3003,"width":3003,"url":"http://localhost:10028/wp-content/uploads/2025/04/condividi.svg","orientation":"portrait"},"medium":{"height":"300","width":"300","url":"http://localhost:10028/wp-content/uploads/2025/04/condividi.svg","orientation":"portrait"},"thumbnail":{"height":"150","width":"150","url":"http://localhost:10028/wp-content/uploads/2025/04/condividi.svg","orientation":"portrait"}},"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}}} /-->
+						</div>
+						<!-- /wp:group -->
+
+						<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}}},"textColor":"light-blue"} -->
+						<p class="has-light-blue-color has-text-color has-link-color">
+							<a
+								href="http://localhost:10028/privacy-policy-2/"
+								data-type="page"
+								data-id="104"
+								>Condividi</a
+							>
+						</p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:group -->
+
+					<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"},"padding":"no"} -->
+					<div
+						class="wp-block-group"
+						style="
+							margin-top: 0;
+							margin-bottom: 0;
+							padding-top: 0;
+							padding-right: 0;
+							padding-bottom: 0;
+							padding-left: 0;
+						"
+					>
+						<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|20"}}},"layout":{"type":"constrained"}} -->
+						<div
+							class="wp-block-group"
+							style="padding-bottom: var(--wp--preset--spacing--20)"
+						>
+							<!-- wp:safe-svg/svg-icon {"svgURL":"http://localhost:10028/wp-content/uploads/2025/04/warning-circle-svgrepo-com-1.svg","imageID":236,"imageWidth":24,"imageHeight":24,"dimensionWidth":24,"dimensionHeight":24,"imageSizes":{"full":{"height":24,"width":24,"url":"http://localhost:10028/wp-content/uploads/2025/04/warning-circle-svgrepo-com-1.svg","orientation":"portrait"},"medium":{"height":"300","width":"300","url":"http://localhost:10028/wp-content/uploads/2025/04/warning-circle-svgrepo-com-1.svg","orientation":"portrait"},"thumbnail":{"height":"150","width":"150","url":"http://localhost:10028/wp-content/uploads/2025/04/warning-circle-svgrepo-com-1.svg","orientation":"portrait"}},"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}}} /-->
+						</div>
+						<!-- /wp:group -->
+
+						<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}}},"textColor":"light-blue"} -->
+						<p class="has-light-blue-color has-text-color has-link-color">
+							<a
+								href="http://localhost:10028/privacy-policy-2/"
+								data-type="page"
+								data-id="104"
+								>Vedi azioni</a
+							>
+						</p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
+
+				<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+				<div class="wp-block-group" style="margin-top: 0; margin-bottom: 0">
+					<!-- wp:paragraph -->
+					<p>Argomenti</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:buttons -->
+					<div class="wp-block-buttons">
+						<!-- wp:button {"textColor":"light-blue","className":"is-style-outline","style":{"border":{"radius":"50px"},"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}},"spacing":{"padding":{"left":"var:preset|spacing|50","right":"var:preset|spacing|50","top":"0","bottom":"0"}}},"fontSize":"small"} -->
+						<div class="wp-block-button is-style-outline">
+							<a
+								class="wp-block-button__link has-light-blue-color has-text-color has-link-color has-small-font-size has-custom-font-size wp-element-button"
+								style="
+									border-radius: 50px;
+									padding-top: 0;
+									padding-right: var(--wp--preset--spacing--50);
+									padding-bottom: 0;
+									padding-left: var(--wp--preset--spacing--50);
+								"
+								>Elettorale</a
+							>
+						</div>
+						<!-- /wp:button -->
+					</div>
+					<!-- /wp:buttons -->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"style":{"spacing":{"blockGap":"10rem"}},"layout":{"type":"flex","justifyContent":"left"}} -->
+		<div class="wp-block-group">
+			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
+			<div class="wp-block-group">
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem"}}} -->
+				<p style="font-size: 1rem">Data:</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:post-date {"style":{"spacing":{"margin":{"top":"var:preset|spacing|20"}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"fontSize":"small"} /-->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained","justifyContent":"right"}} -->
+			<div class="wp-block-group" style="padding-right: 0; padding-left: 0">
+				<!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem"}}} -->
+				<p style="font-size: 1rem">Tempo di lettura:</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|20"}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"layout":{"type":"constrained"}} -->
+				<div
+					class="wp-block-group"
+					style="
+						margin-top: var(--wp--preset--spacing--20);
+						font-style: normal;
+						font-weight: 700;
+					"
+				>
+					<!-- wp:shortcode -->
+					[acf_field campo="tempo_di_lettura"]
+					<!-- /wp:shortcode -->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:group -->
 		</div>
 		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
+
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
+	<div
+		class="wp-block-group"
+		style="margin-top: var(--wp--preset--spacing--80)"
+	>
+		<!-- wp:columns {"style":{"border":{"top":{"color":"var:preset|color|gray-light","width":"1px"},"right":[],"bottom":[],"left":[]}}} -->
+		<div
+			class="wp-block-columns"
+			style="
+				border-top-color: var(--wp--preset--color--gray-light);
+				border-top-width: 1px;
+			"
+		>
+			<!-- wp:column {"width":"33.33%","style":{"border":{"right":{"color":"var:preset|color|gray-light","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|40"}}}} -->
+			<div
+				class="wp-block-column"
+				style="
+					border-right-color: var(--wp--preset--color--gray-light);
+					border-right-width: 1px;
+					padding-top: var(--wp--preset--spacing--40);
+					flex-basis: 33.33%;
+				"
+			>
+				<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"},"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"right":"0","left":"0","top":"var:preset|spacing|30","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+				<div
+					class="wp-block-group"
+					style="
+						margin-top: 0;
+						margin-bottom: 0;
+						padding-top: var(--wp--preset--spacing--30);
+						padding-right: 0;
+						padding-bottom: 0;
+						padding-left: 0;
+					"
+				>
+					<!-- wp:myblocks/indice-pagina /-->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"width":"66.66%"} -->
+			<div class="wp-block-column" style="flex-basis: 66.66%">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+				<div
+					class="wp-block-group"
+					style="padding-top: var(--wp--preset--spacing--70)"
+				>
+					<!-- wp:group {"className":"descrizione","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"bottom":"var:preset|spacing|60","top":"var:preset|spacing|30"}}},"layout":{"type":"constrained"}} -->
+					<div
+						id="descrizione"
+						class="wp-block-group descrizione"
+						style="
+							margin-top: 0;
+							margin-bottom: 0;
+							padding-top: var(--wp--preset--spacing--30);
+							padding-bottom: var(--wp--preset--spacing--60);
+						"
+					>
+						<!-- wp:post-featured-image /-->
+
+						<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+					</div>
+					<!-- /wp:group -->
+
+					<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"right":"0","left":"0","top":"var:preset|spacing|60","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+					<div
+						id="a-cura-di"
+						class="wp-block-group"
+						style="
+							margin-top: 0;
+							margin-bottom: 0;
+							padding-top: var(--wp--preset--spacing--60);
+							padding-right: 0;
+							padding-bottom: 0;
+							padding-left: 0;
+						"
+					>
+						<!-- wp:heading -->
+						<h2 class="wp-block-heading">A cura di</h2>
+						<!-- /wp:heading -->
+
+						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"dimensions":{"minHeight":""},"border":{"width":"2px","radius":"15px"},"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}}},"textColor":"light-blue","layout":{"type":"constrained"}} -->
+						<div
+							class="wp-block-group has-light-blue-color has-text-color has-link-color"
+							style="
+								border-width: 2px;
+								border-radius: 15px;
+								padding-top: var(--wp--preset--spacing--50);
+								padding-right: var(--wp--preset--spacing--50);
+								padding-bottom: var(--wp--preset--spacing--50);
+								padding-left: var(--wp--preset--spacing--50);
+							"
+						>
+							<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+							<div class="wp-block-group">
+								<!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}}},"textColor":"light-blue"} -->
+								<h2
+									class="wp-block-heading has-light-blue-color has-text-color has-link-color"
+								>
+									Agenzia Nolana
+								</h2>
+								<!-- /wp:heading -->
+
+								<!-- wp:site-logo {"width":147,"style":{"color":{"duotone":"var:preset|duotone|secondary-primary"}}} /-->
+							</div>
+							<!-- /wp:group -->
+
+							<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"textColor":"contrast"} -->
+							<p class="has-contrast-color has-text-color has-link-color">
+								Pomigliano d'Arco<br />Campania Italia
+							</p>
+							<!-- /wp:paragraph -->
+
+							<!-- wp:group {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}},"spacing":{"blockGap":"var:preset|spacing|20","margin":{"top":"var:preset|spacing|40","bottom":"0"},"padding":{"top":"0","bottom":"0"}}},"textColor":"contrast","layout":{"type":"constrained"}} -->
+							<div
+								class="wp-block-group has-contrast-color has-text-color has-link-color"
+								style="
+									margin-top: var(--wp--preset--spacing--40);
+									margin-bottom: 0;
+									padding-top: 0;
+									padding-bottom: 0;
+								"
+							>
+								<!-- wp:paragraph -->
+								<p><strong>PEC</strong>: elettorale.pomigliano@asmepec.it</p>
+								<!-- /wp:paragraph -->
+
+								<!-- wp:paragraph -->
+								<p><strong>Telefono</strong>: 0815217158-0815217110</p>
+								<!-- /wp:paragraph -->
+
+								<!-- wp:paragraph -->
+								<p>
+									<strong>Email</strong>:
+									antonietta.montanino@comune.pomiglianodarco.na.it
+								</p>
+								<!-- /wp:paragraph -->
+							</div>
+							<!-- /wp:group -->
+						</div>
+						<!-- /wp:group -->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:column -->
+		</div>
+		<!-- /wp:columns -->
+
+		<!-- wp:group {"metadata":{"name":"Esplora novità"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
+		<div
+			id="esplora-novita"
+			class="wp-block-group"
+			style="margin-top: var(--wp--preset--spacing--80)"
+		>
+			<!-- wp:heading -->
+			<h2 class="wp-block-heading">Esplora Novità</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
+			<div
+				class="wp-block-group"
+				style="margin-top: var(--wp--preset--spacing--60)"
+			>
+				<!-- wp:group {"className":"border-secondary rounded-lg","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"border":{"radius":"5px","width":"1px"}},"layout":{"type":"constrained"}} -->
+				<div
+					class="wp-block-group border-secondary rounded-lg"
+					style="
+						border-width: 1px;
+						border-radius: 5px;
+						padding-top: var(--wp--preset--spacing--60);
+						padding-right: var(--wp--preset--spacing--50);
+						padding-bottom: var(--wp--preset--spacing--60);
+						padding-left: var(--wp--preset--spacing--50);
+					"
+				>
+					<!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}}},"textColor":"light-blue"} -->
+					<h2
+						class="wp-block-heading has-light-blue-color has-text-color has-link-color"
+					>
+						<a
+							href="http://localhost:10028/servizi/"
+							data-type="page"
+							data-id="34"
+							>Servizi</a
+						>
+					</h2>
+					<!-- /wp:heading -->
+				</div>
+				<!-- /wp:group -->
+
+				<!-- wp:group {"className":" border-secondary rounded-lg\t","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"border":{"radius":"5px","width":"1px"}},"layout":{"type":"constrained"}} -->
+				<div
+					class="wp-block-group border-secondary rounded-lg"
+					style="
+						border-width: 1px;
+						border-radius: 5px;
+						padding-top: var(--wp--preset--spacing--60);
+						padding-right: var(--wp--preset--spacing--50);
+						padding-bottom: var(--wp--preset--spacing--60);
+						padding-left: var(--wp--preset--spacing--50);
+					"
+				>
+					<!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}}},"textColor":"light-blue"} -->
+					<h2
+						class="wp-block-heading has-light-blue-color has-text-color has-link-color"
+					>
+						<a href="http://localhost:10028/news/" data-type="page" data-id="36"
+							>News</a
+						>
+					</h2>
+					<!-- /wp:heading -->
+				</div>
+				<!-- /wp:group -->
+
+				<!-- wp:group {"className":" border-secondary rounded-lg","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"border":{"radius":"5px","width":"1px"}},"layout":{"type":"constrained"}} -->
+				<div
+					class="wp-block-group border-secondary rounded-lg"
+					style="
+						border-width: 1px;
+						border-radius: 5px;
+						padding-top: var(--wp--preset--spacing--60);
+						padding-right: var(--wp--preset--spacing--50);
+						padding-bottom: var(--wp--preset--spacing--60);
+						padding-left: var(--wp--preset--spacing--50);
+					"
+				>
+					<!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"var:preset|color|light-blue"}}}},"textColor":"light-blue"} -->
+					<h2
+						class="wp-block-heading has-light-blue-color has-text-color has-link-color"
+					>
+						<a
+							href="http://localhost:10028/contatti-2/"
+							data-type="page"
+							data-id="58"
+							>Contatti</a
+						>
+					</h2>
+					<!-- /wp:heading -->
+				</div>
+				<!-- /wp:group -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:spacer {"height":"1rem"} -->
+	<div style="height: 1rem" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"agenzia-nolana","tagName":"footer","className":"site-footer"} /-->

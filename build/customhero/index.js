@@ -11621,7 +11621,7 @@ function Edit({
                       className: "link-select-button",
                       onClick: () => setShowLinkInput(!showLinkInput),
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
-                        src: "/wp-content/themes/pa-centrale/assets/svg/arrow-down-angle-svgrepo-com.svg",
+                        src: "/wp-content/themes/agenzia-nolana/assets/svg/arrow-down-angle-svgrepo-com.svg",
                         alt: "Arrow Down",
                         style: {
                           width: "50px",

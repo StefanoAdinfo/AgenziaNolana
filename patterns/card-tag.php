@@ -2,12 +2,12 @@
 
 /**
  * Title: Card Tag
- * Slug: pa-centrale/card-tag
- * Category: pa-centrale
+ * Slug: agenzia-nolana/card-tag
+ * Category: agenzia-nolana
  * Description: Card with img, tags, date, title, content and read more link
  * 
  * 
- * @package pa-centrale
+ * @package agenzia-nolana
  * @since 1.0.0
  */
 ?>
