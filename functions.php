@@ -285,6 +285,7 @@ function myblocks_block_init()
 	register_block_type(__DIR__ . '/build/search');
 	register_block_type(__DIR__ . '/build/indice-pagina');
 	register_block_type(__DIR__ . '/build/customhero');
+	register_block_type(__DIR__ . '/build/card');
 }
 add_action('init', 'myblocks_block_init');
 
