@@ -5,6 +5,6 @@
  *
  * @link https://core.trac.wordpress.org/ticket/54272
  *
- * @package agenzia-nolana
+ * @package AgenziaNolana
  * @since 1.0.0
  */

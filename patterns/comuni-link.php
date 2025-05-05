@@ -2,13 +2,13 @@
 
 /**
  * Title: Comuni link
- * Slug: agenzia-nolana/comuni-link
- * Category: agenzia-nolana
+ * Slug: AgenziaNolana/comuni-link
+ * Category: AgenziaNolana
  * Description: Comuni link
  * 
  * 
  *
- * @package agenzia-nolana
+ * @package AgenziaNolana
  * @since 1.0.0
  */
 ?>
@@ -24,7 +24,7 @@
             <!-- wp:query {"query":{"postType":"comuni","perPage":3},"displayLayout":{"type":"flex","columns":3}} -->
             <div class="wp-block-query">
                 <!-- wp:post-template -->
-                <!-- wp:pattern {"slug":"agenzia-nolana/arrow-link"}  /-->
+                <!-- wp:pattern {"slug":"AgenziaNolana/arrow-link"}  /-->
                 <!-- /wp:post-template -->
             </div>
             <!-- /wp:query -->

@@ -211,7 +211,7 @@ export default function Edit({ attributes, setAttributes }) {
 														onClick={() => setShowLinkInput(!showLinkInput)}
 													>
 														<img
-															src="/wp-content/themes/agenzia-nolana/assets/svg/arrow-down-angle-svgrepo-com.svg"
+															src="/wp-content/themes/AgenziaNolana/assets/svg/arrow-down-angle-svgrepo-com.svg"
 															alt="Arrow Down"
 															style={{
 																width: "50px",

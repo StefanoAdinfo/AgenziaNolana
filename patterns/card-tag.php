@@ -2,12 +2,12 @@
 
 /**
  * Title: Card Tag
- * Slug: agenzia-nolana/card-tag
- * Category: agenzia-nolana
+ * Slug: AgenziaNolana/card-tag
+ * Category: AgenziaNolana
  * Description: Card with img, tags, date, title, content and read more link
  * 
  * 
- * @package agenzia-nolana
+ * @package AgenziaNolana
  * @since 1.0.0
  */
 ?>

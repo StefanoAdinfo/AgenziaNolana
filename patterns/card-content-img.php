@@ -2,13 +2,13 @@
 
 /**
  * Title: Card  Content Img
- * Slug: agenzia-nolana/card-content-img
+ * Slug: AgenziaNolana/card-content-img
  * Description: Card with img, tags, date, title, content and read more link
- * Category: agenzia-nolana
+ * Category: AgenziaNolana
  * 
  * 
  *
- * @package agenzia-nolana
+ * @package AgenziaNolana
  * @since 1.0.0
  */
 ?>

@@ -2,10 +2,10 @@
 
 /**
  * Title: Footer
- * Slug: agenzia-nolana/hidden-footer
+ * Slug: AgenziaNolana/hidden-footer
  * Inserter: no
  *
- * @package agenzia-nolana
+ * @package AgenziaNolana
  * @since 1.0.0
  */
 ?>

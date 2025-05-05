@@ -2,10 +2,10 @@
 
 /**
  * Title: Hidden post meta
- * Slug: agenzia-nolana/hidden-post-meta
+ * Slug: AgenziaNolana/hidden-post-meta
  * Inserter: no
  *
- * @package agenzia-nolana
+ * @package AgenziaNolana
  * @since 1.0.0
  */
 ?>
@@ -19,7 +19,7 @@
 	<!-- /wp:group -->
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
-		<!-- wp:post-terms {"term":"category","prefix":"<?php echo esc_html__('Categories: ', 'agenzia-nolana') ?>"} /-->
+		<!-- wp:post-terms {"term":"category","prefix":"<?php echo esc_html__('Categories: ', 'AgenziaNolana') ?>"} /-->
 	</div>
 	<!-- /wp:group -->
 </div>

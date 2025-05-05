@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package agenzia-nolana
+ * @package AgenziaNolana
  * @since 1.0.0
  */
 
@@ -19,7 +19,7 @@
 function pa_centrale_styles()
 {
 	wp_enqueue_style(
-		'agenzia-nolana-style',
+		'AgenziaNolana-style',
 		get_stylesheet_uri(),
 		[],
 		wp_get_theme()->get('Version')
@@ -172,7 +172,7 @@ add_action('init', 'crea_post_type_comuni');
 function my_custom_block_pattern_category()
 {
 	register_block_pattern_category(
-		'agenzia-nolana',
+		'AgenziaNolana',
 		array(
 			'label' => __('Pa Centrale', 'textdomain'),
 		)
@@ -192,82 +192,82 @@ function register_patterns()
 {
 
 	register_block_pattern(
-		'agenzia-nolana/arrow-link',
+		'AgenziaNolana/arrow-link',
 		array(
 			'title'       => __('Arrow link', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/arrow-link.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/comuni-link',
+		'AgenziaNolana/comuni-link',
 		array(
 			'title'       => __('Comuni link', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/comuni-link.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/card-tag',
+		'AgenziaNolana/card-tag',
 		array(
 			'title'       => __('Card Tag', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/card-tag.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/cards-tag',
+		'AgenziaNolana/cards-tag',
 		array(
 			'title'       => __('Cards Tag', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/cards-tag.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/servizi-link',
+		'AgenziaNolana/servizi-link',
 		array(
 			'title'       => __('Servizi link', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/servizi-link.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/card-content-img',
+		'AgenziaNolana/card-content-img',
 		array(
 			'title'       => __('Card Content Img', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/card-content-img.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/card-agenzia-home',
+		'AgenziaNolana/card-agenzia-home',
 		array(
 			'title'       => __('Card Agenzia Home', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/card-agenzia-home.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/archive-agenzia',
+		'AgenziaNolana/archive-agenzia',
 		array(
 			'title'       => __('Archive Agenzia', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/archive-agenzia.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/foto-video-card',
+		'AgenziaNolana/foto-video-card',
 		array(
 			'title'       => __('Foto Video Card', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/foto-video-card.php'),
 		)
 	);
 	register_block_pattern(
-		'agenzia-nolana/cards-title-and-content',
+		'AgenziaNolana/cards-title-and-content',
 		array(
 			'title'       => __('Cards Title and Content', 'textdomain'),
-			'categories'  => array('agenzia-nolana'),
+			'categories'  => array('AgenziaNolana'),
 			'content'     => file_get_contents(get_template_directory() . '/patterns/cards-title-and-content.php'),
 		)
 	);
