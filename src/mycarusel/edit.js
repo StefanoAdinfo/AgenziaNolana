@@ -101,7 +101,7 @@ export default function Edit({ attributes, setAttributes }) {
 						checked={autoplay}
 						onChange={(val) => setAttributes({ autoplay: val })}
 					/>
-					<RangeControl
+					{/* <RangeControl
 						label="Slide per visualizzazione"
 						value={slidesPerView}
 						onChange={(val) => setAttributes({ slidesPerView: val })}
@@ -110,7 +110,7 @@ export default function Edit({ attributes, setAttributes }) {
 							3,
 							posts?.length && posts.length < 3 ? posts.length : 3,
 						)}
-					/>
+					/> */}
 
 					{/* <ToggleControl
 						label="Mostra titolo"
@@ -126,31 +126,35 @@ export default function Edit({ attributes, setAttributes }) {
 						disabled={attributes.showExcerpt && activeOptionsCount === 1}
 					/> */}
 
-					<ToggleControl
+					{/* <ToggleControl
 						label="Mostra immagine in evidenza"
 						checked={attributes.showFeaturedImage}
 						onChange={(val) => setAttributes({ showFeaturedImage: val })}
 						disabled={attributes.showFeaturedImage && activeOptionsCount === 1}
-					/>
+					/> */}
 				</PanelBody>
 			</InspectorControls>
 
 			{posts ? (
 				<Swiper
 					modules={[Navigation, Pagination, Autoplay]}
+					centeredSlides={true}
 					spaceBetween={20}
 					slidesPerView={slidesPerView}
-					navigation
+					// navigation
 					pagination={{ clickable: true }}
 					// autoplay={ autoplay ? { delay: 3000 } : false }
 					autoplay={false}
+					loop={true}
+					allowTouchMove={false}
 				>
 					{posts.map((post) => (
 						<SwiperSlide key={post.id}>
-							<div className="swiper-card">
+							<div className="carusel-slide-inner">
 								{showFeaturedImage &&
 									post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
 										<img
+											className="carusel-img"
 											src={post._embedded["wp:featuredmedia"][0].source_url}
 											alt={post.title?.rendered || ""}
 											style={{
@@ -161,13 +165,14 @@ export default function Edit({ attributes, setAttributes }) {
 									)}
 
 								{showTitle && post.title?.rendered && (
-									<h3>{post.title.rendered}</h3>
+									<h3 className="carusel-title">{post.title.rendered}</h3>
 								)}
 
 								{showExcerpt &&
 									post.excerpt?.rendered &&
 									post.excerpt.rendered.trim() !== "" && (
 										<p
+											className="carusel-excerpt"
 											dangerouslySetInnerHTML={{
 												__html: post.excerpt.rendered,
 											}}

@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function performSearch(query, page) {
 		if (!query) {
-			searchFilters.innerHTML = "";
 			searchResults.innerHTML = "";
+			searchFilters.innerHTML = "";
 			noReults.classList.remove("d-none");
 			noReults.innerHTML =
 				'<p class="text-muted">Inserisci un termine di ricerca.</p>';
@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		)
 			.then((response) => response.json())
 			.then((data) => {
+				console.log(data);
 				if (data.posts.length > 0) {
-					console.log(data);
 					noReults.innerHTML = "";
 					noReults.classList.add("d-none");
 
@@ -221,11 +221,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		clearBtn.classList.add("d-none");
 
 		// Resetta i risultati
-		const results = document.getElementById("searchResults");
+		const noReults = document.getElementById("noResults");
 		const pagination = document.getElementById("pagination");
-		if (results)
-			results.innerHTML =
-				'<p class="text-muted">Inserisci un termine di ricerca</p>';
+		if (noReults) searchFilters.innerHTML = "";
+		searchResults.innerHTML = "";
+		noReults.innerHTML =
+			'<p class="text-muted">Inserisci un termine di ricerca.</p>';
 		if (pagination) pagination.innerHTML = "";
 	};
 

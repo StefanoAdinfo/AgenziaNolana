@@ -1,4 +1,4 @@
-=== Indice Pagina ===
+=== Custom Hero ===
 Contributors:      The WordPress Contributors
 Tags:              block
 Tested up to:      6.7
@@ -21,7 +21,7 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload the plugin files to the `/wp-content/plugins/indice-pagina` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/customhero` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 
 

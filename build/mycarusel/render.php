@@ -23,7 +23,7 @@ if (!$query->have_posts()) {
 }
 ?>
 
-<div class="swiper carusel-block">
+<div class="swiper carusel-swiper-container">
 	<div class="swiper-wrapper">
 		<?php while ($query->have_posts()) : $query->the_post(); ?>
 			<div class="swiper-slide">
@@ -57,14 +57,16 @@ if (!$query->have_posts()) {
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
 		if (typeof Swiper !== "undefined") {
-			new Swiper('.carusel-block', {
+			new Swiper('.carusel-swiper-container', {
 				loop: true,
+				centeredSlides: true,
+				spaceBetween: 20,
 				slidesPerView: <?php echo esc_js($slides_per_view); ?>,
 				autoplay: <?php echo $autoplay ? '{ delay: 3000 }' : 'false'; ?>,
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
+				// navigation: {
+				// 	nextEl: '.swiper-button-next',
+				// 	prevEl: '.swiper-button-prev',
+				// },
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,

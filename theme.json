@@ -26,6 +26,11 @@
 					"name": "Medium Gray"
 				},
 				{
+					"slug": "ultra-light-blue",
+					"color": "#5EA2D4",
+					"name": "Ultra Light Blue"
+				},
+				{
 					"slug": "light-blue",
 					"color": "#0066CC",
 					"name": "Light Blue"
@@ -81,12 +86,12 @@
 			"duotone": [
 				{
 					"slug": "secondary-primary",
-					"colors": [ "#004d99", "#0066cc" ],
+					"colors": ["#004d99", "#0066cc"],
 					"name": "Secondary and Primary"
 				},
 				{
 					"slug": "primary-contrast",
-					"colors": [ "#0066cc", "#f0f0f0" ],
+					"colors": ["#0066cc", "#f0f0f0"],
 					"name": "Primary and Contrast"
 				}
 			]
@@ -96,7 +101,7 @@
 			"wideSize": "1300px"
 		},
 		"spacing": {
-			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
+			"units": ["px", "em", "rem", "vh", "vw", "%"]
 		},
 		"typography": {
 			"dropCap": false,
@@ -383,7 +388,7 @@
 		{
 			"name": "no-title",
 			"title": "No title",
-			"postTypes": [ "post", "page" ]
+			"postTypes": ["post", "page"]
 		}
 	]
 }

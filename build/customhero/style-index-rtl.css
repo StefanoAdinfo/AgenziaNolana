@@ -1,0 +1,283 @@
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/customhero/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/* Impostazioni generali per il contenitore */
+.hero-block {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+/* Posiziona il titolo e sottotitolo nella parte alta della slide */
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; /* Disposizione verticale per il titolo e sottotitolo */
+  justify-content: center; /* Centra verticalmente il titolo e sottotitolo */
+  align-items: center; /* Centra orizzontalmente il titolo e sottotitolo */
+  position: relative;
+}
+
+/* Titolo e Sottotitolo centrati */
+.slide-text {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra del testo per migliorare la leggibilità */
+  text-align: center;
+  color: white;
+  z-index: 10;
+  position: absolute;
+  top: 25%; /* Posiziona il titolo e sottotitolo al centro della slide */
+}
+.slide-text h2 {
+  color: #5ea2d4;
+  font-size: 3.5rem; /* Dimensione del font per il titolo */
+}
+.slide-text h2:hover {
+  color: #0066cc;
+  cursor: pointer;
+}
+.slide-text p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.icon-title {
+  font-size: 2.2rem; /* Dimensione del font per il titolo */
+}
+
+/* Icone sotto la slide (modifica la posizione verticale delle icone) */
+.icons-above-slider {
+  position: absolute;
+  bottom: 18%; /* Posiziona le icone più in basso, sotto il titolo e sottotitolo */
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 10; /* Assicurati che le icone siano sopra la slide */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra orizzontalmente le icone */
+  align-items: center;
+}
+
+/* Paginazione Swiper - Personalizza l'aspetto dei bullets e il comportamento */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Swiper Container - Imposta le dimensioni e la posizione */
+.hero-swiper-container {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  overflow: hidden;
+  /* Personalizzazione dei bullet della paginazione */
+  /* Dot attivo - Cambia il colore e l'ombra */
+  /* Dot non attivo - Modifica la trasparenza e aggiungi il bordo */
+  /* Hover sui bullet - Aumenta la dimensione e cambia il colore al passaggio del mouse */
+}
+.hero-swiper-container .swiper-pagination-bullet {
+  width: 22px !important; /* Dimensione del dot */
+  height: 22px !important; /* Dimensione del dot */
+  background-color: #ffffff !important; /* Colore del dot */
+  border-radius: 50% !important; /* Rende il dot rotondo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Ombra sui dots */
+}
+.hero-swiper-container .swiper-pagination-bullet-active {
+  background-color: #ffffff !important; /* Colore del dot attivo */
+  box-shadow: 0 0 10px rgb(0, 0, 0) !important; /* Ombra più intensa per il dot attivo */
+}
+.hero-swiper-container .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  opacity: 1 !important; /* Opacità dei dot non attivi */
+  border: 2px solid #ffffff !important; /* Bordi bianchi */
+  border-radius: 50% !important; /* Rende il dot rotondo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Ombra sui dots non attivi */
+  background-color: transparent !important; /* Colore del dot */
+}
+.hero-swiper-container .swiper-pagination-bullet:hover {
+  background-color: #ffffff !important; /* Colore al passaggio del mouse */
+  transition: background-color 0.3s ease !important; /* Transizione al passaggio del mouse */
+  width: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
+  height: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
+}
+
+/* Circle Icon - Contenitore per le icone circolari */
+.circle-icon {
+  position: relative;
+  text-align: center;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Hover della Circle Icon - Cambia colore al passaggio del mouse */
+.circle-icon:hover {
+  background-color: #003366;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover per l'icona dentro il cerchio */
+.circle-icon:hover .icon-svg {
+  color: white;
+}
+
+/* Hover per l'icona della freccia dentro il cerchio */
+.circle-icon:hover .icon-svg-arrow {
+  color: #004d99;
+}
+
+/* Icona SVG - Configurazioni di larghezza, altezza e colore */
+.icon-svg {
+  width: 50px;
+  height: 50px;
+  color: gray;
+}
+
+/* Icona della freccia - Configurazioni per l'icona della freccia */
+.icon-svg-arrow {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #003366;
+}
+
+/* Hover della freccia - Aggiungi animazione e cambia colore */
+.icon-svg-arrow:hover {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #0066cc !important; /* Cambia il colore quando hover */
+  transform: translateY(5px); /* Muove la freccia di 5px verso il basso */
+}
+
+/* Media query per schermi con larghezza max di 1000px (tipicamente tablet grandi e piccoli laptop) */
+@media (max-width: 1000px) {
+  /* Posizione del titolo e sottotitolo per dispositivi di media grandezza */
+  .slide-text {
+    top: 30%;
+    font-size: 1.4rem; /* Modifica la dimensione del font per tablet */
+  }
+  .icon-title {
+    font-size: 1.5rem; /* Dimensione del font per il titolo */
+  }
+  /* Posizione e dimensione delle icone sotto la slide */
+  .icons-above-slider {
+    bottom: 15%;
+    width: 90%; /* Aumenta la larghezza delle icone per adattarsi bene a tablet più grandi */
+  }
+  /* Modifica la dimensione delle icone circolari */
+  .circle-icon {
+    width: 220px; /* Dimensioni maggiori delle icone per schermi di dimensioni medio-grandi */
+    height: 220px;
+  }
+  /* Modifica le dimensioni dell'icona */
+  .icon-svg {
+    width: 45px;
+    height: 45px;
+  }
+  .icon-svg-arrow {
+    width: 45px;
+    height: 45px;
+  }
+}
+/* Media query per schermi con larghezza max di 768px (tipicamente tablet e dispositivi mobili) */
+@media (max-width: 768px) {
+  /* Adatta la posizione del titolo e sottotitolo per dispositivi più piccoli */
+  .slide-text {
+    top: 35%;
+    font-size: 1.2rem; /* Riduci la dimensione del font per il titolo */
+  }
+  /* Modifica la posizione delle icone per schermi piccoli */
+  .icons-above-slider {
+    bottom: 15%;
+    width: 80%; /* Riduci la larghezza per adattarsi meglio a schermi più piccoli */
+  }
+  /* Modifica la grandezza delle icone per schermi mobili */
+  .circle-icon {
+    width: 180px; /* Riduci la dimensione del cerchio */
+    height: 180px; /* Riduci la dimensione del cerchio */
+  }
+  /* Modifica le dimensioni dell'icona */
+  .icon-svg {
+    width: 40px;
+    height: 40px;
+  }
+  .icon-svg-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* Media query per schermi con larghezza max di 767px (tipicamente smartphone) */
+@media (max-width: 767px) {
+  .icon-title {
+    font-size: 1rem; /* Dimensione del font per il titolo */
+  }
+  /* Rimuovi le icone circolari sotto la slide */
+  .icon-svg {
+    display: none; /* Nasconde le icone sotto la slide su schermi piccoli */
+  }
+  /* Modifica la posizione del titolo e sottotitolo */
+  .slide-text {
+    top: 40%; /* Abbassa il titolo un po' più vicino al centro */
+    font-size: 1.2rem; /* Riduci la dimensione del font per schermi piccoli */
+  }
+  .slide-text h2 {
+    font-size: 2.5rem; /* Dimensione del font per il titolo */
+  }
+  /* Modifica la posizione delle icone per schermi piccoli */
+  .icons-above-slider {
+    bottom: 20%;
+    width: 70%; /* Riduci la larghezza per adattarsi meglio a schermi più piccoli */
+  }
+  /* Riduci la posizione delle icone sotto la slide */
+  .circle-icon {
+    width: 130px; /* Riduci la dimensione delle icone */
+    height: 130px;
+  }
+  /* Riduci la dimensione dell'icona */
+  .icon-svg {
+    width: 35px;
+    height: 35px;
+  }
+  .icon-svg-arrow {
+    width: 35px;
+    height: 35px;
+  }
+}
+/* Media query per schermi con larghezza max di 480px (tipicamente smartphone) */
+@media (max-width: 480px) {
+  /* Aumenta la visibilità dei testi sui dispositivi mobili più piccoli */
+  .slide-text {
+    top: 40%;
+    font-size: 1rem; /* Font più piccolo per schermi piccoli */
+  }
+  /* Adatta ulteriormente la posizione delle icone */
+  .icons-above-slider {
+    bottom: 20%;
+    width: 60%; /* Ulteriormente ridotto */
+  }
+  /* Ulteriore riduzione delle dimensioni delle icone */
+  .circle-icon {
+    width: 120px; /* Riduci la dimensione delle icone */
+    height: 120px;
+  }
+  .icon-svg {
+    width: 30px;
+    height: 30px;
+  }
+  .icon-svg-arrow {
+    width: 30px;
+    height: 30px;
+  }
+}

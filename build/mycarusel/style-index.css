@@ -1,6 +1,7 @@
 /*!*************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/mycarusel/style.scss ***!
   \*************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 /**
  * The following styles get applied both on the front of your site
  * and in the editor.
@@ -10,6 +11,7 @@
 .carusel-slide-inner {
   padding: 5px;
   margin: 5px;
+  margin-bottom: 50px;
   background: #f9f9f9;
   border-radius: 12px;
   text-align: center;
@@ -33,6 +35,61 @@
 .carusel-excerpt {
   font-size: 0.9rem;
   color: #555;
+}
+
+.carusel-swiper-container {
+  padding: 0 5%; /* margine ai lati */
+  position: relative;
+  /* Personalizzazione dei bullet della paginazione */
+  /* Dot attivo - Cambia il colore e l'ombra */
+  /* Dot non attivo - Modifica la trasparenza e aggiungi il bordo */
+  /* Hover sui bullet - Aumenta la dimensione e cambia il colore al passaggio del mouse */
+}
+.carusel-swiper-container .swiper-pagination-bullet {
+  width: 22px !important; /* Dimensione del dot */
+  height: 22px !important; /* Dimensione del dot */
+  background-color: #0066cc !important; /* Colore del dot */
+  border-radius: 50% !important; /* Rende il dot rotondo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Ombra sui dots */
+}
+.carusel-swiper-container .swiper-pagination-bullet-active {
+  background-color: #0066cc !important; /* Colore del dot attivo */
+  box-shadow: 0 0 10px rgb(0, 0, 0) !important; /* Ombra più intensa per il dot attivo */
+}
+.carusel-swiper-container .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  opacity: 1 !important; /* Opacità dei dot non attivi */
+  border: 2px solid #0066cc !important; /* Bordi bianchi */
+  border-radius: 50% !important; /* Rende il dot rotondo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Ombra sui dots non attivi */
+  background-color: transparent !important; /* Colore del dot */
+}
+.carusel-swiper-container .swiper-pagination-bullet:hover {
+  background-color: #0066cc !important; /* Colore al passaggio del mouse */
+  transition: background-color 0.3s ease !important; /* Transizione al passaggio del mouse */
+  width: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
+  height: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
+}
+
+.carusel-swiper-container .swiper-slide {
+  width: 70%; /* slide principale più grande */
+  transition: transform 0.3s ease;
+  opacity: 0.5; /* laterali più trasparenti */
+}
+
+.carusel-swiper-container .swiper-slide-active {
+  width: 90%;
+  opacity: 1; /* slide centrale opaca */
+  transform: scale(1.05); /* leggero ingrandimento */
+}
+
+.carusel-swiper-container .swiper-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none; /* nascondi frecce se vuoi un look pulito */
 }
 
 /*# sourceMappingURL=style-index.css.map*/

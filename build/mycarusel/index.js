@@ -11516,38 +11516,28 @@ function Edit({
           onChange: val => setAttributes({
             autoplay: val
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
-          label: "Slide per visualizzazione",
-          value: slidesPerView,
-          onChange: val => setAttributes({
-            slidesPerView: val
-          }),
-          min: 1,
-          max: Math.max(3, posts?.length && posts.length < 3 ? posts.length : 3)
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-          label: "Mostra immagine in evidenza",
-          checked: attributes.showFeaturedImage,
-          onChange: val => setAttributes({
-            showFeaturedImage: val
-          }),
-          disabled: attributes.showFeaturedImage && activeOptionsCount === 1
         })]
       })
     }), posts ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_5__.Swiper, {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_6__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_6__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_6__.Autoplay],
+      centeredSlides: true,
       spaceBetween: 20,
-      slidesPerView: slidesPerView,
-      navigation: true,
+      slidesPerView: slidesPerView
+      // navigation
+      ,
       pagination: {
         clickable: true
       }
       // autoplay={ autoplay ? { delay: 3000 } : false }
       ,
       autoplay: false,
+      loop: true,
+      allowTouchMove: false,
       children: posts.map(post => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_5__.SwiperSlide, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-          className: "swiper-card",
+          className: "carusel-slide-inner",
           children: [showFeaturedImage && post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+            className: "carusel-img",
             src: post._embedded["wp:featuredmedia"][0].source_url,
             alt: post.title?.rendered || "",
             style: {
@@ -11555,8 +11545,10 @@ function Edit({
               height: "auto"
             }
           }), showTitle && post.title?.rendered && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h3", {
+            className: "carusel-title",
             children: post.title.rendered
           }), showExcerpt && post.excerpt?.rendered && post.excerpt.rendered.trim() !== "" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+            className: "carusel-excerpt",
             dangerouslySetInnerHTML: {
               __html: post.excerpt.rendered
             }
@@ -11864,7 +11856,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkindice_pagina"] = globalThis["webpackChunkindice_pagina"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkcustomhero"] = globalThis["webpackChunkcustomhero"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

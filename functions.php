@@ -36,6 +36,9 @@ function  bootstrap_italia_setup()
 	wp_enqueue_style('bootstrap-italia-style');
 	wp_register_script('bootstrap-italia-script', get_parent_theme_file_uri('assets/js/bootstrap-italia.min.js'));
 	wp_enqueue_script('bootstrap-italia-script');
+
+	wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
+	wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', [], null, true);
 }
 
 // Carico i file di Bootstrap Italia anche nell'editor di WordPress
@@ -281,6 +284,7 @@ function myblocks_block_init()
 	register_block_type(__DIR__ . '/build/breadcrumbs');
 	register_block_type(__DIR__ . '/build/search');
 	register_block_type(__DIR__ . '/build/indice-pagina');
+	register_block_type(__DIR__ . '/build/customhero');
 }
 add_action('init', 'myblocks_block_init');
 
@@ -436,7 +440,7 @@ function custom_news_search_callback()
 		return;
 	}
 
-	$post_types = ['news', 'servizi'];
+	$post_types = ['news', 'servizi', 'comuni'];
 	$results = [];
 	$filterArray = [];
 	$max_num_pages = 1; // Default
@@ -451,30 +455,30 @@ function custom_news_search_callback()
 	);
 
 
-	// Definisci il filtro per cercare solo sui titoli
-	$search_by_title_only = function ($search, $wp_query) {
-		global $wpdb;
+	// // Definisci il filtro per cercare solo sui titoli
+	// $search_by_title_only = function ($search, $wp_query) {
+	// 	global $wpdb;
 
-		if (empty($search)) {
-			return $search;
-		}
+	// 	if (empty($search)) {
+	// 		return $search;
+	// 	}
 
-		$q = $wp_query->query_vars;
-		$n = !empty($q['exact']) ? '' : '%';
+	// 	$q = $wp_query->query_vars;
+	// 	$n = !empty($q['exact']) ? '' : '%';
 
-		$search_terms = $q['search_terms'];
-		$search = '';
+	// 	$search_terms = $q['search_terms'];
+	// 	$search = '';
 
-		foreach ($search_terms as $term) {
-			$term = esc_sql($wpdb->esc_like($term));
-			$search .= " AND {$wpdb->posts}.post_title LIKE '{$n}{$term}{$n}'";
-		}
+	// 	foreach ($search_terms as $term) {
+	// 		$term = esc_sql($wpdb->esc_like($term));
+	// 		$search .= " AND {$wpdb->posts}.post_title LIKE '{$n}{$term}{$n}'";
+	// 	}
 
-		return $search;
-	};
+	// 	return $search;
+	// };
 
 	// Applica il filtro SOLO per questa ricerca
-	add_filter('posts_search', $search_by_title_only, 10, 2);
+	// add_filter('posts_search', $search_by_title_only, 10, 2);
 
 	foreach ($post_types as $post_type) {
 

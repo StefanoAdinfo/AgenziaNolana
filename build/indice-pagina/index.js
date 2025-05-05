@@ -80,7 +80,7 @@ function Edit() {
             "aria-controls": "collapseOne",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               style: {
-                color: "#0066cc"
+                color: '#0066cc'
               },
               children: "INDICE DELLA PAGINA"
             })
@@ -387,7 +387,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkindice_pagina"] = globalThis["webpackChunkindice_pagina"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkcustomhero"] = globalThis["webpackChunkcustomhero"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

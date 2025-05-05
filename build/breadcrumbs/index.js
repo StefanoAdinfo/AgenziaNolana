@@ -333,7 +333,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkindice_pagina"] = globalThis["webpackChunkindice_pagina"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkcustomhero"] = globalThis["webpackChunkcustomhero"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

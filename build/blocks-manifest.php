@@ -23,6 +23,64 @@ return array(
 		'render' => 'file:./render.php',
 		'viewScript' => 'file:./view.js'
 	),
+	'customhero' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'myblocks/customhero',
+		'version' => '0.1.0',
+		'title' => 'Custom Hero',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'autoplay' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'slides' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => '',
+						'subtitle' => '',
+						'backgroundImage' => ''
+					)
+				)
+			),
+			'icons' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'icon' => '',
+						'title' => 'Icona 1',
+						'url' => ''
+					),
+					array(
+						'icon' => '',
+						'title' => 'Icona 2',
+						'url' => ''
+					),
+					array(
+						'icon' => '',
+						'title' => 'Icona 3',
+						'url' => ''
+					)
+				)
+			)
+		),
+		'textdomain' => 'customhero',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
 	'indice-pagina' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
