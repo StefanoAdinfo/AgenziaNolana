@@ -6,69 +6,49 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "white",
+					"slug": "base",
 					"color": "#ffffff",
 					"name": "White"
 				},
 				{
-					"slug": "gray-ultra-light",
-					"color": "#F5F5F5",
-					"name": "Ultra Light Gray"
-				},
-				{
-					"slug": "gray-light",
-					"color": "#EBEBEB",
-					"name": "Light Gray"
-				},
-				{
-					"slug": "gray-medium",
-					"color": "#808080",
-					"name": "Medium Gray"
-				},
-				{
-					"slug": "ultra-light-blue",
-					"color": "#5EA2D4",
-					"name": "Ultra Light Blue"
-				},
-				{
-					"slug": "light-blue",
-					"color": "#0066CC",
-					"name": "Light Blue"
-				},
-				{
-					"slug": "blue",
-					"color": "#004D99",
-					"name": "Blue"
-				},
-				{
-					"slug": "dark-blue",
-					"color": "#003366",
-					"name": "Dark Blue"
-				},
-				{
-					"slug": "base",
-					"color": "#ffffff",
-					"name": "Base"
-				},
-				{
 					"slug": "contrast",
 					"color": "#000000",
-					"name": "Contrast"
-				},
-				{
-					"slug": "primary",
-					"color": "#000000",
-					"name": "Primary"
-				},
-				{
-					"slug": "secondary",
-					"color": "#0066CC",
-					"name": "Secondary"
+					"name": "Black"
 				},
 				{
 					"slug": "transparent",
 					"color": "transparent",
 					"name": "Transparent"
+				},
+				{
+					"slug": "light-primary",
+					"color": "#4392E0",
+					"name": "light blue"
+				},
+				{
+					"slug": "primary",
+					"color": "#0066CC",
+					"name": "primary blue"
+				},
+				{
+					"slug": "secondary",
+					"color": "#1F5C99",
+					"name": "secondary blue"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#265380",
+					"name": "tertiary blue"
+				},
+				{
+					"slug": "quaternary",
+					"color": "#1a3453",
+					"name": "quaternary blue"
+				},
+				{
+					"slug": "light-gray",
+					"color": "#9DA2A6",
+					"name": "light gray"
 				}
 			],
 			"gradients": [
