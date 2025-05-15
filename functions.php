@@ -555,12 +555,6 @@ add_shortcode('acf_field', 'mostra_acf');
 
 
 
-
-
-
-
-
-
 add_action('init', 'themeslug_register_block_styles');
 
 function themeslug_register_block_styles()
