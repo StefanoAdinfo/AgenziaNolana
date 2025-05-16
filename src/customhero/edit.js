@@ -152,7 +152,7 @@ export default function Edit({ attributes, setAttributes }) {
 									Aggiungi slide +
 								</Button>
 							</div>
-							<div className=" slide-content">
+							<div className="slide-content">
 								<RichText
 									tagName="h2"
 									value={slide.title}

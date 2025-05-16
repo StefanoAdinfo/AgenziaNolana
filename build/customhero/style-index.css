@@ -26,23 +26,23 @@
 .slide-text {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombra del testo per migliorare la leggibilità */
   text-align: center;
-  color: white;
+  color: var(--wp--preset--color--base);
   z-index: 10;
   position: absolute;
   top: 25%; /* Posiziona il titolo e sottotitolo al centro della slide */
 }
 .slide-text h2 {
-  color: #5ea2d4;
-  font-size: 3.5rem; /* Dimensione del font per il titolo */
+  color: var(--wp--preset--color--ultra-light-blue);
+  font-size: 3.5rem;
 }
 .slide-text h2:hover {
-  color: #0066cc;
+  color: var(--wp--preset--color--light-blue);
   cursor: pointer;
 }
 .slide-text p {
   font-size: 1.5rem;
   margin-top: 10px;
-  color: #ffffff;
+  color: var(--wp--preset--color--base);
 }
 
 .icon-title {
@@ -86,23 +86,23 @@
 .hero-swiper-container .swiper-pagination-bullet {
   width: 22px !important; /* Dimensione del dot */
   height: 22px !important; /* Dimensione del dot */
-  background-color: #ffffff !important; /* Colore del dot */
+  background-color: var(--wp--preset--color--base) !important; /* Colore del dot */
   border-radius: 50% !important; /* Rende il dot rotondo */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Ombra sui dots */
 }
 .hero-swiper-container .swiper-pagination-bullet-active {
-  background-color: #ffffff !important; /* Colore del dot attivo */
+  background-color: var(--wp--preset--color--base) !important; /* Colore del dot attivo */
   box-shadow: 0 0 10px rgb(0, 0, 0) !important; /* Ombra più intensa per il dot attivo */
 }
 .hero-swiper-container .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   opacity: 1 !important; /* Opacità dei dot non attivi */
-  border: 2px solid #ffffff !important; /* Bordi bianchi */
+  border: 2px solid var(--wp--preset--color--base) !important; /* Bordi bianchi */
   border-radius: 50% !important; /* Rende il dot rotondo */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Ombra sui dots non attivi */
   background-color: transparent !important; /* Colore del dot */
 }
 .hero-swiper-container .swiper-pagination-bullet:hover {
-  background-color: #ffffff !important; /* Colore al passaggio del mouse */
+  background-color: var(--wp--preset--color--base) !important; /* Colore al passaggio del mouse */
   transition: background-color 0.3s ease !important; /* Transizione al passaggio del mouse */
   width: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
   height: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
@@ -115,7 +115,7 @@
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--wp--preset--color--base);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,26 +124,26 @@
 
 /* Hover della Circle Icon - Cambia colore al passaggio del mouse */
 .circle-icon:hover {
-  background-color: #003366;
-  color: white;
+  background-color: var(--wp--preset--color--dark-blue);
+  color: var(--wp--preset--color--base);
   transition: background-color 0.3s ease;
 }
 
 /* Hover per l'icona dentro il cerchio */
 .circle-icon:hover .icon-svg {
-  color: white;
+  color: var(--wp--preset--color--base);
 }
 
 /* Hover per l'icona della freccia dentro il cerchio */
 .circle-icon:hover .icon-svg-arrow {
-  color: #004d99;
+  color: var(--wp--preset--color--blue);
 }
 
 /* Icona SVG - Configurazioni di larghezza, altezza e colore */
 .icon-svg {
   width: 50px;
   height: 50px;
-  color: gray;
+  color: var(--wp--preset--color--gray-medium);
 }
 
 /* Icona della freccia - Configurazioni per l'icona della freccia */
@@ -151,13 +151,13 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
-  color: #003366;
+  color: var(--wp--preset--color--dark-blue);
 }
 
 /* Hover della freccia - Aggiungi animazione e cambia colore */
 .icon-svg-arrow:hover {
   transition: transform 0.3s ease, color 0.3s ease;
-  color: #0066cc !important; /* Cambia il colore quando hover */
+  color: var(--wp--preset--color--light-blue) !important; /* Cambia il colore quando hover */
   transform: translateY(5px); /* Muove la freccia di 5px verso il basso */
 }
 

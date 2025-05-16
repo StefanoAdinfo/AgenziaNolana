@@ -22,17 +22,17 @@
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .slide-content h2 {
-  color: #5ea2d4;
+  color: var(--wp--preset--color--ultra-light-blue);
   font-size: 3.5rem; /* Dimensione del font per il titolo */
 }
 .slide-content h2:hover {
-  color: #0066cc;
+  color: var(--wp--preset--color--light-blue);
   cursor: pointer;
 }
 .slide-content p {
   font-size: 1.5rem;
   margin-top: 10px;
-  color: #ffffff;
+  color: var(--wp--preset--color--base);
 }
 
 .icon-title {
@@ -52,7 +52,7 @@
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--wp--preset--color--base);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,8 +60,8 @@
 }
 
 .circle-icon:hover {
-  background-color: white;
-  color: black;
+  background-color: var(--wp--preset--color--base);
+  color: var(--wp--preset--color--contrast);
 }
 
 .link-select-button {
@@ -82,25 +82,25 @@
 .disabled {
   cursor: not-allowed !important;
   opacity: 0.5;
-  background: gray;
+  background: var(--wp--preset--color--gray-medium);
 }
 
 .swiper-pagination-bullet {
   width: 22px !important; /* Dimensione del dot */
   height: 22px !important; /* Dimensione del dot */
-  background-color: #ffffff !important; /* Colore del dot */
+  background-color: var(--wp--preset--color--base) !important; /* Colore del dot */
   border-radius: 50% !important; /* Rende il dot rotondo */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Aggiungi un'ombra */
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #ffffff !important; /* Colore del dot attivo */
+  background-color: var(--wp--preset--color--base) !important; /* Colore del dot attivo */
   box-shadow: 0 0 10px rgb(0, 0, 0) !important; /* Ombra più intensa per il dot attivo */
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   opacity: 1 !important; /* Riduci l'opacità dei dot non attivi */
-  border: 2px solid #ffffff !important; /* Bordi bianchi */
+  border: 2px solid var(--wp--preset--color--base) !important; /* Bordi bianchi */
   border-radius: 50% !important; /* Rende il dot rotondo */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Aggiungi un'ombra */
   background-color: transparent !important; /* Colore del dot */
@@ -108,7 +108,7 @@
 
 /* Cambia colore e dimensione al passaggio del mouse */
 .swiper-pagination-bullet:hover {
-  background-color: #ffffff !important; /* Colore al passaggio del mouse */
+  background-color: var(--wp--preset--color--base) !important; /* Colore al passaggio del mouse */
   transition: background-color 0.3s ease !important; /* Transizione al passaggio del mouse */
   width: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
   height: 24px !important; /* Aumenta la dimensione al passaggio del mouse */

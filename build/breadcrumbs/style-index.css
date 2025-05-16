@@ -14,11 +14,11 @@
 
 .custom-breadcrumb a {
   text-decoration: none;
-  color: #0073aa;
+  color: var(--wp--preset--color--ultra-light-blue);
 }
 
 .custom-breadcrumb span {
-  color: #555;
+  color: var(--wp--preset--color--gray-medium);
 }
 
 /*# sourceMappingURL=style-index.css.map*/
