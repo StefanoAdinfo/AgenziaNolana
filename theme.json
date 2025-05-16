@@ -16,39 +16,44 @@
 					"name": "Black"
 				},
 				{
+					"slug": "gray-ultra-light",
+					"color": "#EBECED",
+					"name": "Ultra Light Gray"
+				},
+				{
+					"slug": "gray-light",
+					"color": "#9DA2A6",
+					"name": "Light Gray"
+				},
+				{
+					"slug": "gray-medium",
+					"color": "#797C80",
+					"name": "Medium Gray"
+				},
+				{
+					"slug": "ultra-light-blue",
+					"color": "#4392E0",
+					"name": "Ultra Light Blue"
+				},
+				{
+					"slug": "light-blue",
+					"color": "#0066CC",
+					"name": "Light Blue"
+				},
+				{
+					"slug": "blue",
+					"color": "#1F5C99",
+					"name": "Blue"
+				},
+				{
+					"slug": "dark-blue",
+					"color": "#294766",
+					"name": "Dark Blue"
+				},
+				{
 					"slug": "transparent",
 					"color": "transparent",
 					"name": "Transparent"
-				},
-				{
-					"slug": "light-primary",
-					"color": "#4392E0",
-					"name": "light blue"
-				},
-				{
-					"slug": "primary",
-					"color": "#0066CC",
-					"name": "primary blue"
-				},
-				{
-					"slug": "secondary",
-					"color": "#1F5C99",
-					"name": "secondary blue"
-				},
-				{
-					"slug": "tertiary",
-					"color": "#265380",
-					"name": "tertiary blue"
-				},
-				{
-					"slug": "quaternary",
-					"color": "#1a3453",
-					"name": "quaternary blue"
-				},
-				{
-					"slug": "light-gray",
-					"color": "#9DA2A6",
-					"name": "light gray"
 				}
 			],
 			"gradients": [
