@@ -53,3 +53,21 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
 plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
 "installation." Arbitrary sections will be shown below the built-in sections outlined above.
+
+
+
+
+### Comando per creare i block Theme
+npx @wordpress/create-block@latest nomeblocco --variant dynamic --target-dir . --namespace myblocks
+
+
+### Comando per Creare i plugins
+npx @wordpress/create-block@latest nmeplugin --variant dynamic --target-dir .
+
+
+
+### Comandi per avviare il progetto
+
+npm i swiper
+
+npm start
