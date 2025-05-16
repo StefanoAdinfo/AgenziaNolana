@@ -29,37 +29,28 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
-a:not(.footermenu) {
+a:not(.footermenu li a) {
 	text-decoration: none !important;
 }
-a:not(.footermenu):hover {
+a:not(.footermenu li a):hover {
 	text-decoration: underline !important;
 }
-.headermenu li a {
-	text-decoration: none;
-}
-.headermenu li a:hover {
-	text-decoration: underline;
-}
+
 .headermenu li button:hover {
 	text-decoration: underline;
 }
-.footermenu {
-	text-decoration: underline !important;
-}
-.footermenu:hover {
-	text-decoration: none !important;
-}
-.bottomfootermenu li {
-	text-decoration: underline !important;
-}
-.bottomfootermenu li:hover {
-	text-decoration: none !important;
-}
+
 .headermenu .wp-block-navigation__submenu-container {
 	margin-top: 15px;
 	border-radius: 5px;
 	overflow: hidden;
+}
+
+.footermenu li {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none !important;
+	}
 }
 
 /* css fer il form  */

@@ -2,6 +2,12 @@
 	"version": 2,
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"settings": {
+		"custom": {
+			"navigationMenus": {
+				"header-menu": "Header Menu",
+				"footer-menu": "Footer Menu"
+			}
+		},
 		"appearanceTools": true,
 		"color": {
 			"palette": [
