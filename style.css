@@ -39,11 +39,14 @@ a:not(.footermenu li a):hover {
 .headermenu li button:hover {
 	text-decoration: underline;
 }
+.headermenu li a {
+	margin-bottom: 5px;
+}
 
 .headermenu .wp-block-navigation__submenu-container {
-	margin-top: 15px;
 	border-radius: 5px;
 	overflow: hidden;
+	z-index: 1000 !important;
 }
 
 .footermenu li {
