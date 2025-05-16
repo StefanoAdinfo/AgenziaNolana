@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
   const searchBtn = document.getElementById("searchButton");
   const searchResults = document.getElementById("searchResults");
-  const noReults = document.getElementById("noResults");
+  const noResults = document.getElementById("noResults");
   const searchFilters = document.getElementById("searchFilters");
   const pagination = document.getElementById("pagination");
   let currentQuery = "";
@@ -59,23 +59,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!query) {
       searchResults.innerHTML = "";
       searchFilters.innerHTML = "";
-      noReults.classList.remove("d-none");
-      noReults.innerHTML = '<p class="text-muted">Inserisci un termine di ricerca.</p>';
+      noResults.classList.remove("d-none");
+      noResults.innerHTML = '<p class="text-muted">Inserisci un termine di ricerca.</p>';
       pagination.innerHTML = "";
       return;
     } else {
       searchFilters.innerHTML = "";
       searchResults.innerHTML = "";
-      noReults.classList.remove("d-none");
-      noReults.innerHTML = '<p class="text-muted">Caricamento...</p>';
+      noResults.classList.remove("d-none");
+      noResults.innerHTML = '<p class="text-muted">Caricamento...</p>';
     }
 
     // Notare l'aggiunta di selectedPostType
     fetch(`/wp-admin/admin-ajax.php?action=custom_news_search&term=${encodeURIComponent(query)}&page=${page}&post_type=${selectedPostType}`).then(response => response.json()).then(data => {
       console.log(data);
       if (data.posts.length > 0) {
-        noReults.innerHTML = "";
-        noReults.classList.add("d-none");
+        noResults.innerHTML = "";
+        noResults.classList.add("d-none");
         const htmlResult = data.posts.map(post => `
 						<div class="border border-1 rounded-2 shadow-sm p-4 mb-3">
 							<div class="d-flex justify-content-between mb-2">
@@ -132,16 +132,16 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
       } else {
-        noReults.classList.remove("d-none");
+        noResults.classList.remove("d-none");
         searchResults.innerHTML = "";
         searchFilters.innerHTML = "";
-        noReults.innerHTML = '<p class="text-muted">Nessun risultato trovato.</p>';
+        noResults.innerHTML = '<p class="text-muted">Nessun risultato trovato.</p>';
         pagination.innerHTML = "";
       }
     }).catch(() => {
       searchResults.innerHTML = "";
       searchFilters.innerHTML = "";
-      noReults.innerHTML = '<p class="text-danger">Errore nella ricerca.</p>';
+      noResults.innerHTML = '<p class="text-danger">Errore nella ricerca.</p>';
       pagination.innerHTML = "";
     });
   }
@@ -188,11 +188,11 @@ document.addEventListener("DOMContentLoaded", function () {
     clearBtn.classList.add("d-none");
 
     // Resetta i risultati
-    const noReults = document.getElementById("noResults");
+    const noResults = document.getElementById("noResults");
     const pagination = document.getElementById("pagination");
-    if (noReults) searchFilters.innerHTML = "";
+    if (noResults) searchFilters.innerHTML = "";
     searchResults.innerHTML = "";
-    noReults.innerHTML = '<p class="text-muted">Inserisci un termine di ricerca.</p>';
+    noResults.innerHTML = '<p class="text-muted">Inserisci un termine di ricerca.</p>';
     if (pagination) pagination.innerHTML = "";
   };
   openBtn.addEventListener("click", openModal);
