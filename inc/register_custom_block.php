@@ -21,5 +21,7 @@ function my_custom_block()
     register_block_type($base . '/indice-pagina');
     register_block_type($base . '/customhero');
     register_block_type($base . '/card');
+    register_block_type($base . '/myhero');
+    register_block_type($base . '/adinfo-hero');
 }
 add_action('init', 'my_custom_block');

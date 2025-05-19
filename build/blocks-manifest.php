@@ -1,6 +1,45 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'adinfo-hero' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'myblocks/adinfo-hero',
+		'version' => '0.1.0',
+		'title' => 'Adinfo Hero',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'autoplay' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'slides' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => '',
+						'subtitle' => '',
+						'backgroundImage' => '',
+						'buttonLink' => ''
+					)
+				)
+			)
+		),
+		'textdomain' => 'adinfo-hero',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
 	'breadcrumbs' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -259,6 +298,44 @@ return array(
 			)
 		),
 		'textdomain' => 'mycarusel',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
+	'myhero' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'myblocks/myhero',
+		'version' => '0.1.0',
+		'title' => 'Myhero',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'autoplay' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'slides' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => '',
+						'subtitle' => '',
+						'backgroundImage' => ''
+					)
+				)
+			)
+		),
+		'textdomain' => 'myhero',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',

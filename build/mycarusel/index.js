@@ -11476,7 +11476,7 @@ function Edit({
   const activeOptionsCount = [attributes.showTitle, attributes.showExcerpt, attributes.showFeaturedImage, attributes.Maxslides].filter(Boolean).length;
 
   // serve per effettuare la query per ottenere i post
-  const posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select("core").getEntityRecords("postType", postType, {
+  const posts = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select('core').getEntityRecords('postType', postType, {
     per_page: Maxslides,
     // Maxslides
     _embed: true // Per featured image
@@ -11492,11 +11492,11 @@ function Edit({
           label: "Tipo di post",
           value: postType,
           options: [{
-            label: "Video",
-            value: "video"
+            label: 'Video',
+            value: 'video'
           }, {
-            label: "Foto",
-            value: "foto"
+            label: 'Foto',
+            value: 'foto'
           } // CPT
           ],
           onChange: val => setAttributes({
@@ -11536,18 +11536,18 @@ function Edit({
       children: posts.map(post => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_5__.SwiperSlide, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
           className: "carusel-slide-inner",
-          children: [showFeaturedImage && post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+          children: [showFeaturedImage && post._embedded?.['wp:featuredmedia']?.[0]?.source_url && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
             className: "carusel-img",
-            src: post._embedded["wp:featuredmedia"][0].source_url,
-            alt: post.title?.rendered || "",
+            src: post._embedded['wp:featuredmedia'][0].source_url,
+            alt: post.title?.rendered || '',
             style: {
-              width: "100%",
-              height: "auto"
+              width: '100%',
+              height: 'auto'
             }
           }), showTitle && post.title?.rendered && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h3", {
             className: "carusel-title",
             children: post.title.rendered
-          }), showExcerpt && post.excerpt?.rendered && post.excerpt.rendered.trim() !== "" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+          }), showExcerpt && post.excerpt?.rendered && post.excerpt.rendered.trim() !== '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
             className: "carusel-excerpt",
             dangerouslySetInnerHTML: {
               __html: post.excerpt.rendered
@@ -11856,7 +11856,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkcustomhero"] = globalThis["webpackChunkcustomhero"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkmyhero"] = globalThis["webpackChunkmyhero"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

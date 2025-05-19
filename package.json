@@ -1,5 +1,5 @@
 {
-	"name": "customhero",
+	"name": "adinfo-hero",
 	"version": "0.1.0",
 	"description": "Example block scaffolded with Create Block tool.",
 	"author": "The WordPress Contributors",
@@ -15,7 +15,7 @@
 		"start": "wp-scripts start --webpack-copy-php --blocks-manifest"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.15.0"
+		"@wordpress/scripts": "^30.16.0"
 	},
 	"dependencies": {
 		"swiper": "^11.2.6"

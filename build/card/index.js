@@ -80,11 +80,11 @@ function Edit({
     badge,
     linkText
   } = attributes;
-  const [direction2, setDirection] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)(attributes.direction || "left");
+  const [direction2, setDirection] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)(attributes.direction || 'left');
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     class: "wp-block-myblocks-card",
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-      className: "wp-block-myblocks-card " + direction2
+      className: 'wp-block-myblocks-card ' + direction2
     }),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
@@ -94,11 +94,11 @@ function Edit({
             label: "Direzione",
             value: direction2,
             options: [{
-              label: "Immagine a sinistra",
-              value: "left"
+              label: 'Immagine a sinistra',
+              value: 'left'
             }, {
-              label: "Immagine a destra",
-              value: "right"
+              label: 'Immagine a destra',
+              value: 'right'
             }],
             onChange: value => {
               setDirection(value);
@@ -114,15 +114,15 @@ function Edit({
         onSelect: media => setAttributes({
           image: media.url
         }),
-        allowedTypes: ["image"],
+        allowedTypes: ['image'],
         value: image,
         render: ({
           open
         }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           onClick: open,
           style: {
-            cursor: "pointer",
-            display: "inline-block"
+            cursor: 'pointer',
+            display: 'inline-block'
           },
           children: image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
             src: image,
@@ -477,7 +477,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkcustomhero"] = globalThis["webpackChunkcustomhero"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkmyhero"] = globalThis["webpackChunkmyhero"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

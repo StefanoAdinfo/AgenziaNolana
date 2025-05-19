@@ -1,0 +1,75 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.my-hero-block {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.swiper-slide {
+	width: 100%;
+	height: 680px !important;
+}
+
+.slide-content {
+	text-align: center;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	h2 {
+		color: #4392e0;
+		font-size: 3.5rem; /* Dimensione del font per il titolo */
+	}
+	h2:hover {
+		color: #0066cc;
+		cursor: pointer;
+	}
+	p {
+		font-size: 1.5rem;
+		margin-top: 10px;
+		color: white;
+	}
+}
+.icon-title {
+	font-size: 1.8rem; /* Dimensione del font per il titolo */
+}
+
+.disabled {
+	cursor: not-allowed !important;
+	opacity: 0.5;
+	background: gray;
+}
+
+// Modifica i colori e le dimensioni dei dot della paginazione swiper
+.swiper-pagination-bullet {
+	width: 22px !important; /* Dimensione del dot */
+	height: 22px !important; /* Dimensione del dot */
+	background-color: var(
+		--wp--preset--color--base
+	) !important; /* Colore del dot */
+	border-radius: 50% !important; /* Rende il dot rotondo */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Aggiungi un'ombra */
+}
+
+.swiper-pagination-bullet-active {
+	background-color: var(
+		--wp--preset--color--base
+	) !important; /* Colore del dot attivo */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1) !important; /* Ombra più intensa per il dot attivo */
+}
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+	opacity: 1 !important; /* Riduci l'opacità dei dot non attivi */
+	border: 2px solid var(--wp--preset--color--base) !important; /* Bordi bianchi */
+	border-radius: 50% !important; /* Rende il dot rotondo */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; /* Aggiungi un'ombra */
+	background-color: transparent !important; /* Colore del dot */
+}
+/* Cambia colore e dimensione al passaggio del mouse */
+.swiper-pagination-bullet:hover {
+	background-color: var(
+		--wp--preset--color--base
+	) !important; /* Colore al passaggio del mouse */
+	transition: background-color 0.3s ease !important; /* Transizione al passaggio del mouse */
+	width: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
+	height: 24px !important; /* Aumenta la dimensione al passaggio del mouse */
+}

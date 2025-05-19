@@ -18,7 +18,9 @@
 		},
 		"slides": {
 			"type": "array",
-			"default": [{ "title": "", "subtitle": "", "backgroundImage": "" }]
+			"default": [
+				{ "title": "", "subtitle": "", "backgroundImage": "" }
+			]
 		},
 		"icons": {
 			"type": "array",

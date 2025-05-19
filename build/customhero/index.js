@@ -11471,9 +11471,9 @@ function Edit({
   } = attributes;
   const addSlide = () => {
     const newSlides = [...slides, {
-      title: "",
-      subtitle: "",
-      backgroundImage: ""
+      title: '',
+      subtitle: '',
+      backgroundImage: ''
     }];
     setAttributes({
       slides: newSlides
@@ -11538,7 +11538,7 @@ function Edit({
       // autoplay={autoplay ? { delay: 3000 } : false}
       ,
       children: slides.map((slide, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_5__.SwiperSlide, {
-        className: `swiper-slide d-flex align-items-center justify-content-center ${slide.backgroundImage ? "" : "bg-light"}`,
+        className: `swiper-slide d-flex align-items-center justify-content-center ${slide.backgroundImage ? '' : 'bg-light'}`,
         style: {
           backgroundImage: `url(${slide.backgroundImage})`
         },
@@ -11546,7 +11546,7 @@ function Edit({
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
             className: "d-flex justify-content-between align-items-center mb-3",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
-              className: `remove-slide-button  text-white ${slides.length <= 1 ? "disabled" : "bg-danger"}`,
+              className: `remove-slide-button  text-white ${slides.length <= 1 ? 'disabled' : 'bg-danger'}`,
               onClick: () => removeSlide(index),
               disabled: slides.length <= 1,
               isDestructive: true,
@@ -11554,14 +11554,14 @@ function Edit({
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
-                  onSelect: media => updateSlide(index, "backgroundImage", media.url),
-                  allowedTypes: ["image"],
+                  onSelect: media => updateSlide(index, 'backgroundImage', media.url),
+                  allowedTypes: ['image'],
                   render: ({
                     open
                   }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
                     onClick: open,
                     className: "bg-primary text-white",
-                    children: slide.backgroundImage ? "Cambia immagine" : "Carica immagine"
+                    children: slide.backgroundImage ? 'Cambia immagine' : 'Carica immagine'
                   })
                 })
               })
@@ -11576,12 +11576,12 @@ function Edit({
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
               tagName: "h2",
               value: slide.title,
-              onChange: value => updateSlide(index, "title", value),
+              onChange: value => updateSlide(index, 'title', value),
               placeholder: "Titolo"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
               tagName: "p",
               value: slide.subtitle,
-              onChange: value => updateSlide(index, "subtitle", value),
+              onChange: value => updateSlide(index, 'subtitle', value),
               placeholder: "Sottotitolo"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
@@ -11596,7 +11596,7 @@ function Edit({
                     className: "icon-title",
                     tagName: "p",
                     value: icon.title,
-                    onChange: value => updateIcon(index, "title", value),
+                    onChange: value => updateIcon(index, 'title', value),
                     placeholder: icon.title
                   }), icon.icon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
                     src: icon.icon,
@@ -11604,7 +11604,7 @@ function Edit({
                     className: "icon-svg gray-svg"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
-                      onSelect: media => updateIcon(index, "icon", media.url),
+                      onSelect: media => updateIcon(index, 'icon', media.url),
                       type: "image",
                       value: icon.icon,
                       render: ({
@@ -11612,7 +11612,7 @@ function Edit({
                       }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
                         onClick: open,
                         isPrimary: true,
-                        children: icon.icon ? "Aggiorna" : "Aggiungi icona"
+                        children: icon.icon ? 'Aggiorna' : 'Aggiungi icona'
                       })
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
@@ -11624,9 +11624,9 @@ function Edit({
                         src: "/wp-content/themes/AgenziaNolana/assets/svg/arrow-down-angle-svgrepo-com.svg",
                         alt: "Arrow Down",
                         style: {
-                          width: "50px",
-                          height: "50px",
-                          cursor: "pointer"
+                          width: '50px',
+                          height: '50px',
+                          cursor: 'pointer'
                         }
                       })
                     })
@@ -11635,7 +11635,7 @@ function Edit({
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.URLInputButton, {
                       url: icon.url // Seleziona URL pre-esistente
                       ,
-                      onChange: newUrl => updateIcon(index, "url", newUrl) // Salva il nuovo URL
+                      onChange: newUrl => updateIcon(index, 'url', newUrl) // Salva il nuovo URL
                       ,
                       label: "Seleziona una pagina"
                     })
@@ -11935,7 +11935,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkcustomhero"] = globalThis["webpackChunkcustomhero"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkmyhero"] = globalThis["webpackChunkmyhero"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
