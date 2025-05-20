@@ -87,251 +87,153 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 			</InspectorControls>
-
-			<Splide
-				key={slides.length}
-				ref={splideRef}
-				hasTrack={false}
-				options={{
-					type: "fade",
-					perPage: 1,
-					autoplay: false,
-					pagination: true,
-					arrows: false,
-					rewind: false,
-					drag: false,
-				}}
-			>
-				<div className="splide__arrows" />
-				<SplideTrack>
-					{slides.map((slide, index) => (
-						// <SplideSlide
-						// 	key={index}
-						// 	style={{
-						// 		backgroundImage:
-						// 			slide.backgroundImage !== ""
-						// 				? `url(${slide.backgroundImage})`
-						// 				: "none",
-						// 		backgroundSize: "cover",
-						// 		backgroundPosition: "center",
-						// 		minHeight: "400px",
-						// 	}}
-						// 	className="d-flex align-items-center justify-content-center bg-light"
-						// >
-						// 	<div className="slide-content-wrapper container">
-						// 		<div className="d-flex justify-content-between align-items-center mb-5">
-						// 			<Button
-						// 				className={`remove-slide-button text-white ${
-						// 					slides.length <= 1 ? "disabled" : "bg-danger"
-						// 				}`}
-						// 				onClick={() => removeSlide(index)}
-						// 				disabled={slides.length == 1 || !slides.length}
-						// 				isDestructive
-						// 			>
-						// 				Rimuovi slide -
-						// 			</Button>
-
-						// 			<MediaUploadCheck>
-						// 				<MediaUpload
-						// 					onSelect={(media) =>
-						// 						updateSlide(index, "backgroundImage", media.url)
-						// 					}
-						// 					allowedTypes={["image"]}
-						// 					render={({ open }) => (
-						// 						<Button
-						// 							onClick={open}
-						// 							className="bg-primary text-white"
-						// 						>
-						// 							{slide.backgroundImage
-						// 								? "Cambia immagine"
-						// 								: "Carica immagine"}
-						// 						</Button>
-						// 					)}
-						// 				/>
-						// 			</MediaUploadCheck>
-
-						// 			<Button
-						// 				className="add-slide-button"
-						// 				onClick={addSlide}
-						// 				isPrimary
-						// 			>
-						// 				Aggiungi slide +
-						// 			</Button>
-						// 		</div>
-
-						// 		<div className="it-hero-text-wrapper slide-content">
-						// 			<RichText
-						// 				tagName="h5"
-						// 				value={slide.overline}
-						// 				className="it-category"
-						// 				onChange={(value) => updateSlide(index, "overline", value)}
-						// 				placeholder="Titolo occhiello"
-						// 			/>
-						// 			<RichText
-						// 				tagName="h2"
-						// 				value={slide.title}
-						// 				onChange={(value) => updateSlide(index, "title", value)}
-						// 				placeholder="Titolo"
-						// 			/>
-						// 			<RichText
-						// 				tagName="p"
-						// 				value={slide.subtitle}
-						// 				onChange={(value) => updateSlide(index, "subtitle", value)}
-						// 				placeholder="Sottotitolo"
-						// 			/>
-
-						// 			<div className="it-btn-container mb-3 ">
-						// 				<RichText
-						// 					onClick={() => toggleLinkInput(index)}
-						// 					tagName="span"
-						// 					value={slide.buttonText}
-						// 					onChange={(value) =>
-						// 						updateSlide(index, "buttonText", value)
-						// 					}
-						// 					placeholder="Testo bottone"
-						// 					className="btn btn-sm btn-primary d-inline-block text-white text-decoration-none"
-						// 				/>
-
-						// 				{showLinkInputs[index] && (
-						// 					<URLInputButton
-						// 						url={slide.buttonLink || ""}
-						// 						onChange={(value) =>
-						// 							updateSlide(index, "buttonLink", value)
-						// 						}
-						// 						className="mt-3"
-						// 						label="Seleziona una pagina"
-						// 					/>
-						// 				)}
-						// 			</div>
-						// 		</div>
-						// 	</div>
-						// </SplideSlide>
-						<SplideSlide
-							key={index}
-							className="splide__slide it-hero-wrapper it-dark it-overlay position-relative"
-						>
-							{/* Immagine di sfondo */}
-							<div className="img-responsive-wrapper">
-								<div className="img-responsive">
-									<div className="img-wrapper">
-										{slide.backgroundImage && (
-											<img
-												src={slide.backgroundImage}
-												alt={slide.title || ""}
-												title={slide.title || ""}
-											/>
-										)}
+			<div className="adinfo-hero-editor adinfo-hero">
+				<Splide
+					key={slides.length}
+					ref={splideRef}
+					hasTrack={false}
+					options={{
+						type: "fade",
+						perPage: 1,
+						autoplay: false,
+						pagination: true,
+						arrows: false,
+						rewind: false,
+						drag: false,
+					}}
+				>
+					<div className="splide__arrows" />
+					<SplideTrack>
+						{slides.map((slide, index) => (
+							<SplideSlide
+								key={index}
+								className="splide__slide it-hero-wrapper it-dark it-overlay position-relative"
+							>
+								{/* Immagine di sfondo */}
+								<div className="img-responsive-wrapper">
+									<div className="img-responsive">
+										<div className="img-wrapper">
+											{slide.backgroundImage && (
+												<img
+													src={slide.backgroundImage}
+													alt={slide.title || ""}
+													title={slide.title || ""}
+												/>
+											)}
+										</div>
 									</div>
 								</div>
-							</div>
 
-							{/* Contenuto della slide */}
-							<div className="container">
-								<div className="row">
-									<div className="col-12">
-										<div className="it-hero-text-wrapper bg-dark text-white  ">
-											<RichText
-												tagName="span"
-												value={slide.overline}
-												className="it-category"
-												onChange={(value) =>
-													updateSlide(index, "overline", value)
-												}
-												placeholder="Titolo occhiello"
-											/>
-											<RichText
-												tagName="h2"
-												value={slide.title}
-												onChange={(value) => updateSlide(index, "title", value)}
-												placeholder="Titolo"
-											/>
-											<RichText
-												tagName="p"
-												value={slide.subtitle}
-												className="d-none d-lg-block"
-												onChange={(value) =>
-													updateSlide(index, "subtitle", value)
-												}
-												placeholder="Sottotitolo"
-											/>
-
-											<div className="it-btn-container mb-3">
+								{/* Contenuto della slide */}
+								<div className="container">
+									<div className="row">
+										<div className="col-12">
+											<div className="it-hero-text-wrapper bg-dark text-white  ">
 												<RichText
-													onClick={() => toggleLinkInput(index)}
 													tagName="span"
-													value={slide.buttonText}
+													value={slide.overline}
+													className="it-category"
 													onChange={(value) =>
-														updateSlide(index, "buttonText", value)
+														updateSlide(index, "overline", value)
 													}
-													placeholder="Testo bottone"
-													className="btn btn-sm btn-secondary text-white text-decoration-none"
+													placeholder="Titolo occhiello"
+												/>
+												<RichText
+													tagName="h2"
+													value={slide.title}
+													onChange={(value) =>
+														updateSlide(index, "title", value)
+													}
+													placeholder="Titolo"
+												/>
+												<RichText
+													tagName="p"
+													value={slide.subtitle}
+													className="d-none d-lg-block"
+													onChange={(value) =>
+														updateSlide(index, "subtitle", value)
+													}
+													placeholder="Sottotitolo"
 												/>
 
-												{showLinkInputs[index] && (
-													<URLInputButton
-														url={slide.buttonLink || ""}
+												<div className="it-btn-container mb-3">
+													<RichText
+														onClick={() => toggleLinkInput(index)}
+														tagName="span"
+														value={slide.buttonText}
 														onChange={(value) =>
-															updateSlide(index, "buttonLink", value)
+															updateSlide(index, "buttonText", value)
 														}
-														className="mt-3"
-														label="Seleziona una pagina"
+														placeholder="Testo bottone"
+														className="btn btn-sm btn-secondary text-white text-decoration-none"
 													/>
-												)}
+
+													{showLinkInputs[index] && (
+														<URLInputButton
+															url={slide.buttonLink || ""}
+															onChange={(value) =>
+																updateSlide(index, "buttonLink", value)
+															}
+															className="mt-3"
+															label="Seleziona una pagina"
+														/>
+													)}
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div
-								className="position-absolute bottom-0 end-0 p-3 pr-5"
-								style={{ zIndex: 10 }}
-							>
-								<div className="d-flex flex-column align-items-end gap-2">
-									<MediaUploadCheck>
-										<MediaUpload
-											onSelect={(media) =>
-												updateSlide(index, "backgroundImage", media.url)
-											}
-											allowedTypes={["image"]}
-											render={({ open }) => (
-												<Button
-													onClick={open}
-													className="add-image-button bg-primary text-white"
-												>
-													{slide.backgroundImage
-														? "Cambia immagine"
-														: "Carica immagine"}
-												</Button>
-											)}
-										/>
-									</MediaUploadCheck>
+								<div
+									className="position-absolute top-0 end-0 p-3 pr-5"
+									style={{ zIndex: 10 }}
+								>
+									<div className="d-flex flex-column align-items-end gap-2">
+										<MediaUploadCheck>
+											<MediaUpload
+												onSelect={(media) =>
+													updateSlide(index, "backgroundImage", media.url)
+												}
+												allowedTypes={["image"]}
+												render={({ open }) => (
+													<Button
+														onClick={open}
+														className="add-image-button bg-primary text-white"
+													>
+														{slide.backgroundImage
+															? "Cambia immagine"
+															: "Carica immagine"}
+													</Button>
+												)}
+											/>
+										</MediaUploadCheck>
 
-									<div className="d-flex gap-2">
-										<Button
-											className="add-slide-button bg-success text-white rounded-circle button-edit "
-											onClick={addSlide}
-											isPrimary
-										>
-											+
-										</Button>
+										<div className="d-flex  gap-2">
+											<Button
+												className={`remove-slide-button text-white rounded-circle button-edit ${
+													slides.length <= 1 ? "disabled" : "bg-danger"
+												}`}
+												onClick={() => removeSlide(index)}
+												disabled={slides.length === 1 || !slides.length}
+												title="Rimuovi slide"
+											>
+												-
+											</Button>
 
-										<Button
-											className={`remove-slide-button text-white rounded-circle button-edit ${
-												slides.length <= 1 ? "disabled" : "bg-danger"
-											}`}
-											onClick={() => removeSlide(index)}
-											disabled={slides.length === 1 || !slides.length}
-											isDestructive
-										>
-											-
-										</Button>
+											<Button
+												className="add-slide-button bg-success text-white rounded-circle button-edit "
+												onClick={addSlide}
+												title="Aggiungi slide"
+											>
+												+
+											</Button>
+										</div>
 									</div>
 								</div>
-							</div>
-						</SplideSlide>
-					))}
-				</SplideTrack>
-			</Splide>
+							</SplideSlide>
+						))}
+					</SplideTrack>
+				</Splide>
+			</div>
 		</div>
 	);
 }

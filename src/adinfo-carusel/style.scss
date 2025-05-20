@@ -1,0 +1,78 @@
+//Solo per il render del carusel
+.adinfo-carusel-render {
+	.splide__track {
+		position: relative;
+	}
+
+	.splide__pagination {
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 10;
+		display: flex;
+		gap: 0.3rem;
+	}
+}
+// Per editor e render
+.adinfo-carusel {
+	.splide__slide {
+		width: 800px !important;
+		height: 450px !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.25rem;
+		overflow: hidden;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+
+		img {
+			width: 800px;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 0.25rem;
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		.splide__slide {
+			width: 600px !important;
+			height: 350px !important;
+			img {
+				width: 600px;
+			}
+		}
+		.fallback-image {
+			width: 650px;
+			height: 350px;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.splide__slide {
+			width: 500px !important;
+			height: 300px !important;
+			img {
+				width: 500px;
+			}
+		}
+		.fallback-image {
+			width: 500px;
+			height: 300px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.splide__slide {
+			width: 300px !important;
+			height: 200px !important;
+			img {
+				width: 300px;
+			}
+		}
+		.fallback-image {
+			width: 300px;
+			height: 200px;
+		}
+	}
+}

@@ -355,7 +355,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkadinfo_hero"] = globalThis["webpackChunkadinfo_hero"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkadinfo_carusel"] = globalThis["webpackChunkadinfo_carusel"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

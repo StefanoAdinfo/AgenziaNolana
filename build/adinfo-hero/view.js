@@ -25,7 +25,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".splide").forEach(el => {
+  document.querySelectorAll(".splide.adinfo-hero-render").forEach(el => {
     const options = el.dataset.splide ? JSON.parse(el.dataset.splide) : {};
     console.log(options);
     new Splide(el, options).mount();

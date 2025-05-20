@@ -13,7 +13,7 @@ $carousel_options = [
 ?>
 
 <div <?php echo get_block_wrapper_attributes(); ?>>
-	<div class="splide carusel-hero" data-splide='<?php echo esc_attr(wp_json_encode($carousel_options)); ?>'>
+	<div class="splide  adinfo-hero-render adinfo-hero" data-splide='<?php echo esc_attr(wp_json_encode($carousel_options)); ?>'>
 		<div class="splide__track ">
 			<div class="splide__pagination"></div>
 			<div class="splide__list it-dark it-overlay">

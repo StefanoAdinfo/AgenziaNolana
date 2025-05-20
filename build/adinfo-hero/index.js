@@ -2930,217 +2930,122 @@ function Edit({
           })
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.Splide, {
-      ref: splideRef,
-      hasTrack: false,
-      options: {
-        type: "fade",
-        perPage: 1,
-        autoplay: false,
-        pagination: true,
-        arrows: false,
-        rewind: false,
-        drag: false
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-        className: "splide__arrows"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.SplideTrack, {
-        children: slides.map((slide, index) =>
-        /*#__PURE__*/
-        // <SplideSlide
-        // 	key={index}
-        // 	style={{
-        // 		backgroundImage:
-        // 			slide.backgroundImage !== ""
-        // 				? `url(${slide.backgroundImage})`
-        // 				: "none",
-        // 		backgroundSize: "cover",
-        // 		backgroundPosition: "center",
-        // 		minHeight: "400px",
-        // 	}}
-        // 	className="d-flex align-items-center justify-content-center bg-light"
-        // >
-        // 	<div className="slide-content-wrapper container">
-        // 		<div className="d-flex justify-content-between align-items-center mb-5">
-        // 			<Button
-        // 				className={`remove-slide-button text-white ${
-        // 					slides.length <= 1 ? "disabled" : "bg-danger"
-        // 				}`}
-        // 				onClick={() => removeSlide(index)}
-        // 				disabled={slides.length == 1 || !slides.length}
-        // 				isDestructive
-        // 			>
-        // 				Rimuovi slide -
-        // 			</Button>
-        // 			<MediaUploadCheck>
-        // 				<MediaUpload
-        // 					onSelect={(media) =>
-        // 						updateSlide(index, "backgroundImage", media.url)
-        // 					}
-        // 					allowedTypes={["image"]}
-        // 					render={({ open }) => (
-        // 						<Button
-        // 							onClick={open}
-        // 							className="bg-primary text-white"
-        // 						>
-        // 							{slide.backgroundImage
-        // 								? "Cambia immagine"
-        // 								: "Carica immagine"}
-        // 						</Button>
-        // 					)}
-        // 				/>
-        // 			</MediaUploadCheck>
-        // 			<Button
-        // 				className="add-slide-button"
-        // 				onClick={addSlide}
-        // 				isPrimary
-        // 			>
-        // 				Aggiungi slide +
-        // 			</Button>
-        // 		</div>
-        // 		<div className="it-hero-text-wrapper slide-content">
-        // 			<RichText
-        // 				tagName="h5"
-        // 				value={slide.overline}
-        // 				className="it-category"
-        // 				onChange={(value) => updateSlide(index, "overline", value)}
-        // 				placeholder="Titolo occhiello"
-        // 			/>
-        // 			<RichText
-        // 				tagName="h2"
-        // 				value={slide.title}
-        // 				onChange={(value) => updateSlide(index, "title", value)}
-        // 				placeholder="Titolo"
-        // 			/>
-        // 			<RichText
-        // 				tagName="p"
-        // 				value={slide.subtitle}
-        // 				onChange={(value) => updateSlide(index, "subtitle", value)}
-        // 				placeholder="Sottotitolo"
-        // 			/>
-        // 			<div className="it-btn-container mb-3 ">
-        // 				<RichText
-        // 					onClick={() => toggleLinkInput(index)}
-        // 					tagName="span"
-        // 					value={slide.buttonText}
-        // 					onChange={(value) =>
-        // 						updateSlide(index, "buttonText", value)
-        // 					}
-        // 					placeholder="Testo bottone"
-        // 					className="btn btn-sm btn-primary d-inline-block text-white text-decoration-none"
-        // 				/>
-        // 				{showLinkInputs[index] && (
-        // 					<URLInputButton
-        // 						url={slide.buttonLink || ""}
-        // 						onChange={(value) =>
-        // 							updateSlide(index, "buttonLink", value)
-        // 						}
-        // 						className="mt-3"
-        // 						label="Seleziona una pagina"
-        // 					/>
-        // 				)}
-        // 			</div>
-        // 		</div>
-        // 	</div>
-        // </SplideSlide>
-        (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.SplideSlide, {
-          className: "splide__slide it-hero-wrapper it-dark it-overlay position-relative",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-            className: "img-responsive-wrapper",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "img-responsive",
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      className: "adinfo-hero-editor adinfo-hero",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.Splide, {
+        ref: splideRef,
+        hasTrack: false,
+        options: {
+          type: "fade",
+          perPage: 1,
+          autoplay: false,
+          pagination: true,
+          arrows: false,
+          rewind: false,
+          drag: false
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: "splide__arrows"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.SplideTrack, {
+          children: slides.map((slide, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.SplideSlide, {
+            className: "splide__slide it-hero-wrapper it-dark it-overlay position-relative",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "img-responsive-wrapper",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                className: "img-wrapper",
-                children: slide.backgroundImage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
-                  src: slide.backgroundImage,
-                  alt: slide.title || "",
-                  title: slide.title || ""
-                })
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-            className: "container",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-              className: "row",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-                className: "col-12",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                  className: "it-hero-text-wrapper bg-dark text-white  ",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-                    tagName: "span",
-                    value: slide.overline,
-                    className: "it-category",
-                    onChange: value => updateSlide(index, "overline", value),
-                    placeholder: "Titolo occhiello"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-                    tagName: "h2",
-                    value: slide.title,
-                    onChange: value => updateSlide(index, "title", value),
-                    placeholder: "Titolo"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-                    tagName: "p",
-                    value: slide.subtitle,
-                    className: "d-none d-lg-block",
-                    onChange: value => updateSlide(index, "subtitle", value),
-                    placeholder: "Sottotitolo"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                    className: "it-btn-container mb-3",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-                      onClick: () => toggleLinkInput(index),
-                      tagName: "span",
-                      value: slide.buttonText,
-                      onChange: value => updateSlide(index, "buttonText", value),
-                      placeholder: "Testo bottone",
-                      className: "btn btn-sm btn-secondary text-white text-decoration-none"
-                    }), showLinkInputs[index] && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.URLInputButton, {
-                      url: slide.buttonLink || "",
-                      onChange: value => updateSlide(index, "buttonLink", value),
-                      className: "mt-3",
-                      label: "Seleziona una pagina"
-                    })]
-                  })]
-                })
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-            className: "position-absolute bottom-0 end-0 p-3 pr-5",
-            style: {
-              zIndex: 10
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-              className: "d-flex flex-column align-items-end gap-2",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
-                  onSelect: media => updateSlide(index, "backgroundImage", media.url),
-                  allowedTypes: ["image"],
-                  render: ({
-                    open
-                  }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-                    onClick: open,
-                    className: "add-image-button bg-primary text-white",
-                    children: slide.backgroundImage ? "Cambia immagine" : "Carica immagine"
+                className: "img-responsive",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                  className: "img-wrapper",
+                  children: slide.backgroundImage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+                    src: slide.backgroundImage,
+                    alt: slide.title || "",
+                    title: slide.title || ""
                   })
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-                className: "d-flex gap-2",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-                  className: "add-slide-button bg-success text-white rounded-circle button-edit ",
-                  onClick: addSlide,
-                  isPrimary: true,
-                  children: "+"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-                  className: `remove-slide-button text-white rounded-circle button-edit ${slides.length <= 1 ? "disabled" : "bg-danger"}`,
-                  onClick: () => removeSlide(index),
-                  disabled: slides.length === 1 || !slides.length,
-                  isDestructive: true,
-                  children: "-"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "container",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                className: "row",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                  className: "col-12",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                    className: "it-hero-text-wrapper bg-dark text-white  ",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                      tagName: "span",
+                      value: slide.overline,
+                      className: "it-category",
+                      onChange: value => updateSlide(index, "overline", value),
+                      placeholder: "Titolo occhiello"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                      tagName: "h2",
+                      value: slide.title,
+                      onChange: value => updateSlide(index, "title", value),
+                      placeholder: "Titolo"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                      tagName: "p",
+                      value: slide.subtitle,
+                      className: "d-none d-lg-block",
+                      onChange: value => updateSlide(index, "subtitle", value),
+                      placeholder: "Sottotitolo"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                      className: "it-btn-container mb-3",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                        onClick: () => toggleLinkInput(index),
+                        tagName: "span",
+                        value: slide.buttonText,
+                        onChange: value => updateSlide(index, "buttonText", value),
+                        placeholder: "Testo bottone",
+                        className: "btn btn-sm btn-secondary text-white text-decoration-none"
+                      }), showLinkInputs[index] && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.URLInputButton, {
+                        url: slide.buttonLink || "",
+                        onChange: value => updateSlide(index, "buttonLink", value),
+                        className: "mt-3",
+                        label: "Seleziona una pagina"
+                      })]
+                    })]
+                  })
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "position-absolute top-0 end-0 p-3 pr-5",
+              style: {
+                zIndex: 10
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                className: "d-flex flex-column align-items-end gap-2",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+                    onSelect: media => updateSlide(index, "backgroundImage", media.url),
+                    allowedTypes: ["image"],
+                    render: ({
+                      open
+                    }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                      onClick: open,
+                      className: "add-image-button bg-primary text-white",
+                      children: slide.backgroundImage ? "Cambia immagine" : "Carica immagine"
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+                  className: "d-flex  gap-2",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                    className: `remove-slide-button text-white rounded-circle button-edit ${slides.length <= 1 ? "disabled" : "bg-danger"}`,
+                    onClick: () => removeSlide(index),
+                    disabled: slides.length === 1 || !slides.length,
+                    title: "Rimuovi slide",
+                    children: "-"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                    className: "add-slide-button bg-success text-white rounded-circle button-edit ",
+                    onClick: addSlide,
+                    title: "Aggiungi slide",
+                    children: "+"
+                  })]
                 })]
-              })]
-            })
-          })]
-        }, index))
-      })]
-    }, slides.length)]
+              })
+            })]
+          }, index))
+        })]
+      }, slides.length)
+    })]
   });
 }
 
@@ -3439,7 +3344,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkadinfo_hero"] = globalThis["webpackChunkadinfo_hero"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkadinfo_carusel"] = globalThis["webpackChunkadinfo_carusel"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

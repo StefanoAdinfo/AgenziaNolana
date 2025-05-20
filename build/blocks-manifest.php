@@ -1,6 +1,46 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'adinfo-carusel' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'myblocks/adinfo-carusel',
+		'version' => '0.1.0',
+		'title' => 'Adinfo Carusel',
+		'category' => 'widgets',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'attributes' => array(
+			'titolo_carosello' => array(
+				'type' => 'string',
+				'default' => 'Carosello'
+			),
+			'autoplay' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'slides' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'image' => ''
+					)
+				)
+			)
+		),
+		'textdomain' => 'adinfo-carusel',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
 	'adinfo-hero' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

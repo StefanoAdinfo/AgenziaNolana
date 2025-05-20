@@ -23,5 +23,6 @@ function my_custom_block()
     register_block_type($base . '/card');
     // register_block_type($base . '/myhero');
     register_block_type($base . '/adinfo-hero');
+    register_block_type($base . '/adinfo-carusel');
 }
 add_action('init', 'my_custom_block');

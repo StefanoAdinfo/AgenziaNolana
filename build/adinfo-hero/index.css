@@ -10,33 +10,28 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.disabled {
+.adinfo-hero-editor .disabled {
   cursor: not-allowed !important;
   opacity: 0.5;
   background: gray;
 }
-
-.splide__pagination {
+.adinfo-hero-editor .splide__pagination {
   gap: 0.3rem;
 }
-
-.button-edit {
+.adinfo-hero-editor .button-edit {
   width: 35px;
   height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.add-image-button:hover {
+.adinfo-hero-editor .add-image-button:hover {
   background: rgb(12, 66, 192) !important;
 }
-
-.remove-slide-button:hover {
+.adinfo-hero-editor .remove-slide-button:hover {
   background: rgb(192, 1, 1) !important;
 }
-
-.add-slide-button:hover {
+.adinfo-hero-editor .add-slide-button:hover {
   background: rgb(1, 84, 1) !important;
 }
 

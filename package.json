@@ -1,5 +1,5 @@
 {
-	"name": "adinfo-hero",
+	"name": "adinfo-carusel",
 	"version": "0.1.0",
 	"description": "Example block scaffolded with Create Block tool.",
 	"author": "The WordPress Contributors",
@@ -20,6 +20,6 @@
 	"dependencies": {
 		"@splidejs/react-splide": "^0.7.12",
 		"@splidejs/splide": "^4.1.4",
-		"swiper": "^11.2.6"
+		"swiper": "^11.2.7"
 	}
 }

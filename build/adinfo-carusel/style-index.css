@@ -1,0 +1,76 @@
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/adinfo-carusel/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+.adinfo-carusel-render .splide__track {
+  position: relative;
+}
+.adinfo-carusel-render .splide__pagination {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.adinfo-carusel .splide__slide {
+  width: 800px !important;
+  height: 450px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+.adinfo-carusel .splide__slide img {
+  width: 800px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.25rem;
+}
+@media screen and (max-width: 992px) {
+  .adinfo-carusel .splide__slide {
+    width: 600px !important;
+    height: 350px !important;
+  }
+  .adinfo-carusel .splide__slide img {
+    width: 600px;
+  }
+  .adinfo-carusel .fallback-image {
+    width: 650px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .adinfo-carusel .splide__slide {
+    width: 500px !important;
+    height: 300px !important;
+  }
+  .adinfo-carusel .splide__slide img {
+    width: 500px;
+  }
+  .adinfo-carusel .fallback-image {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .adinfo-carusel .splide__slide {
+    width: 300px !important;
+    height: 200px !important;
+  }
+  .adinfo-carusel .splide__slide img {
+    width: 300px;
+  }
+  .adinfo-carusel .fallback-image {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
