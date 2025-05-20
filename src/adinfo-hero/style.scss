@@ -24,41 +24,10 @@
 	}
 }
 .splide__slide {
-	position: relative;
-	overflow: hidden;
 	width: 100%;
 	height: 680px !important;
 }
 
-.splide__slide::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: white;
-	opacity: 0.3;
-	z-index: 1;
-	pointer-events: none;
-}
-
-.splide__slide > * {
-	position: relative;
-	z-index: 2; /* sopra overlay */
-}
-
-.slide-content {
-	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-	h2 {
-		color: #0066cc;
-	}
-
-	p {
-		color: white;
-	}
-}
 /* Dot (bullet) style for Splide pagination */
 .splide__pagination__page {
 	width: 22px !important;

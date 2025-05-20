@@ -16,44 +16,56 @@ $carousel_options = [
 	<div class="splide carusel-hero" data-splide='<?php echo esc_attr(wp_json_encode($carousel_options)); ?>'>
 		<div class="splide__track ">
 			<div class="splide__pagination"></div>
-			<div class="splide__list">
+			<div class="splide__list it-dark it-overlay">
 				<?php foreach ($slides as $slide) :
-					$style = '';
-					if (! empty($slide['backgroundImage'])) {
-						$url   = esc_url($slide['backgroundImage']);
-						$style = "background-image: url('{$url}'); background-size: cover; background-position: center; min-height: 400px;";
-					}
+
 				?>
-					<div class="splide__slide d-flex align-items-center justify-content-center bg-light " style="<?php echo esc_attr($style); ?>">
-						<div class="slide-content-wrapper container">
-							<div class="it-hero-text-wrapper slide-content">
-								<?php if (! empty($slide['overline'])) : ?>
-									<h5 class="it-category"><?php echo esc_html($slide['overline']); ?></h5>
-								<?php endif; ?>
+					<div class="splide__slide it-hero-wrapper it-dark it-overlay">
+						<!-- Immagine di sfondo -->
+						<div class="img-responsive-wrapper">
+							<div class="img-responsive">
+								<div class="img-wrapper">
+									<?php if (! empty($slide['backgroundImage'])) : ?>
+										<img src="<?php echo esc_url($slide['backgroundImage']); ?>"
+											alt="<?php echo esc_attr($slide['title'] ?? ''); ?>"
+											title="<?php echo esc_attr($slide['title'] ?? ''); ?>">
+									<?php endif; ?>
+								</div>
+							</div>
+						</div>
 
-								<?php if (! empty($slide['title'])) : ?>
-									<h2><?php echo esc_html($slide['title']); ?></h2>
-								<?php endif; ?>
+						<!-- Contenuto slide -->
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<div class="it-hero-text-wrapper bg-dark text-white">
+										<?php if (! empty($slide['overline'])) : ?>
+											<span class="it-category"><?php echo esc_html($slide['overline']); ?></span>
+										<?php endif; ?>
 
-								<?php if (! empty($slide['subtitle'])) : ?>
-									<p><?php echo esc_html($slide['subtitle']); ?></p>
-								<?php endif; ?>
+										<?php if (! empty($slide['title'])) : ?>
+											<h2><?php echo esc_html($slide['title']); ?></h2>
+										<?php endif; ?>
 
-								<?php if (! empty($slide['buttonText'])) : ?>
-									<div class="it-btn-container mb-3">
-										<a
-											href="<?php echo esc_url($slide['buttonLink'] ?? '#'); ?>"
-											class="btn btn-sm btn-secondary text-white text-decoration-none">
-											<?php echo esc_html($slide['buttonText']); ?>
-										</a>
+										<?php if (! empty($slide['subtitle'])) : ?>
+											<p class="d-none d-lg-block"><?php echo esc_html($slide['subtitle']); ?></p>
+										<?php endif; ?>
+
+										<?php if (! empty($slide['buttonText'])) : ?>
+											<div class="it-btn-container">
+												<a href="<?php echo esc_url($slide['buttonLink'] ?? '#'); ?>"
+													class="btn btn-sm btn-secondary text-white text-decoration-none">
+													<?php echo esc_html($slide['buttonText']); ?>
+												</a>
+											</div>
+										<?php endif; ?>
 									</div>
-								<?php endif; ?>
+								</div>
 							</div>
 						</div>
 					</div>
 				<?php endforeach; ?>
 			</div>
 		</div>
-
 	</div>
 </div>

@@ -20,4 +20,24 @@
   gap: 0.3rem;
 }
 
+.button-edit {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-image-button:hover {
+  background: rgb(12, 66, 192) !important;
+}
+
+.remove-slide-button:hover {
+  background: rgb(192, 1, 1) !important;
+}
+
+.add-slide-button:hover {
+  background: rgb(1, 84, 1) !important;
+}
+
 /*# sourceMappingURL=index.css.map*/
