@@ -51,8 +51,9 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	const updateSlide = (index, field, value) => {
-		const newSlides = [...slides];
-		newSlides[index][field] = value;
+		const newSlides = slides.map((slide, i) =>
+			i === index ? { ...slide, [field]: value } : slide,
+		);
 		setAttributes({ slides: newSlides });
 	};
 

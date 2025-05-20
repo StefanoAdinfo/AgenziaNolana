@@ -2906,15 +2906,22 @@ function Edit({
       slides: newSlides
     });
   };
+
+  //Ogni oggetto slide è un nuovo riferimento.L'array slides è un nuovo riferimento.
+  //Gutenberg vede che l’attributo slides è stato modificato, e lo salva nel markup.
   const updateSlide = (index, field, value) => {
-    const newSlides = [...slides];
-    newSlides[index][field] = value;
+    const newSlides = slides.map((slide, i) => i === index ? {
+      ...slide,
+      [field]: value
+    } : slide);
     setAttributes({
       slides: newSlides
     });
   };
   if (!slides.length) {
-    addSlide();
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+      children: "Loading"
+    });
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),

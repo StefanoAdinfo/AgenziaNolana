@@ -1,7 +1,7 @@
 <?php
 $titolo_carosello = $attributes['titolo_carosello'] ?? '';
 $slides = $attributes['slides'] ?? [];
-$autoplay = $attributes['autoplay'] ?? false;
+$autoplay = $attributes['autoplay'] ?? true;
 
 $carousel_options = [
 	"type"       => "loop",

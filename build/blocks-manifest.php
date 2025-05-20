@@ -19,7 +19,7 @@ return array(
 		'attributes' => array(
 			'titolo_carosello' => array(
 				'type' => 'string',
-				'default' => 'Carosello'
+				'default' => ''
 			),
 			'autoplay' => array(
 				'type' => 'boolean',

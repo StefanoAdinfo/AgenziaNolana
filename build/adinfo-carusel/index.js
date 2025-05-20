@@ -2817,7 +2817,7 @@ var SplideSlide = ({ children: children2, className, ...props }) => {
   \***************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/adinfo-carusel","version":"0.1.0","title":"Adinfo Carusel","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"titolo_carosello":{"type":"string","default":"Carosello"},"autoplay":{"type":"boolean","default":true},"slides":{"type":"array","default":[{"image":""}]}},"textdomain":"adinfo-carusel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/adinfo-carusel","version":"0.1.0","title":"Adinfo Carusel","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"titolo_carosello":{"type":"string","default":""},"autoplay":{"type":"boolean","default":true},"slides":{"type":"array","default":[{"image":""}]}},"textdomain":"adinfo-carusel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ }),
 
@@ -2892,8 +2892,10 @@ function Edit({
     });
   };
   const updateSlide = (index, field, value) => {
-    const newSlides = [...slides];
-    newSlides[index][field] = value;
+    const newSlides = slides.map((slide, i) => i === index ? {
+      ...slide,
+      [field]: value
+    } : slide);
     setAttributes({
       slides: newSlides
     });

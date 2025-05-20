@@ -14,7 +14,7 @@
 	"attributes": {
 		"titolo_carosello": {
 			"type": "string",
-			"default": "Carosello"
+			"default": ""
 		},
 		"autoplay": {
 			"type": "boolean",

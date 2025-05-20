@@ -66,14 +66,17 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ slides: newSlides });
 	};
 
+	//Ogni oggetto slide è un nuovo riferimento.L'array slides è un nuovo riferimento.
+	//Gutenberg vede che l’attributo slides è stato modificato, e lo salva nel markup.
 	const updateSlide = (index, field, value) => {
-		const newSlides = [...slides];
-		newSlides[index][field] = value;
+		const newSlides = slides.map((slide, i) =>
+			i === index ? { ...slide, [field]: value } : slide,
+		);
 		setAttributes({ slides: newSlides });
 	};
 
 	if (!slides.length) {
-		addSlide();
+		return <div>Loading</div>;
 	}
 
 	return (

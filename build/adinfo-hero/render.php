@@ -1,6 +1,6 @@
 <?php
 $slides = $attributes['slides'] ?? [];
-$autoplay = $attributes['autoplay'] ?? false;
+$autoplay = $attributes['autoplay'] ?? true;
 
 $carousel_options = [
 	"type"       => "fade",
