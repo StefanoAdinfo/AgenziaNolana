@@ -47,9 +47,7 @@ export default function Edit({ attributes, setAttributes }) {
 				subtitle: "",
 				backgroundImage: "",
 				buttonText: "",
-				buttonLink: {
-					url: "",
-				},
+				buttonLink: "",
 				buttonText: "",
 			},
 		];
@@ -79,7 +77,7 @@ export default function Edit({ attributes, setAttributes }) {
 	}
 
 	return (
-		<div {...useBlockProps()} className="carusel-hero">
+		<div {...useBlockProps()}>
 			<InspectorControls>
 				<PanelBody title="Impostazioni Hero" initialOpen={true}>
 					<ToggleControl
@@ -193,26 +191,17 @@ export default function Edit({ attributes, setAttributes }) {
 											placeholder="Testo bottone"
 											className="btn btn-sm btn-secondary d-inline-block text-white text-decoration-none"
 										/>
-										{/*
+
 										{showLinkInputs[index] && (
 											<URLInputButton
-												url={slide.buttonLink?.url || ""}
-												onChange={(newUrl) =>
-													updateSlide(index, "buttonLink", { url: newUrl })
+												url={slide.buttonLink || ""}
+												onChange={(value) =>
+													updateSlide(index, "buttonLink", value)
 												}
 												className="mt-3"
 												label="Seleziona una pagina"
 											/>
-										)} */}
-										{/* <RichText
-											tagName="a"
-											placeholder="Testo a"
-											onChange={(value) => {
-												console.log("value", value);
-												updateSlide(index, "buttonText", value);
-											}}
-											className="btn btn-sm btn-secondary d-inline-block text-white text-decoration-none"
-										/> */}
+										)}
 									</div>
 								</div>
 							</div>

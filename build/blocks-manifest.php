@@ -29,9 +29,7 @@ return array(
 						'title' => '',
 						'subtitle' => '',
 						'backgroundImage' => '',
-						'buttonLink' => array(
-							'url' => ''
-						),
+						'buttonLink' => '',
 						'buttonText' => ''
 					)
 				)

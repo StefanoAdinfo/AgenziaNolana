@@ -10,63 +10,14 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.carusel-hero {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.splide__slide {
-  width: 100%;
-  height: 680px !important;
-}
-
-.slide-content {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-.slide-content h2 {
-  color: #4392e0;
-}
-.slide-content h2:hover {
-  color: #0066cc;
-  cursor: pointer;
-}
-.slide-content p {
-  color: white;
-}
-
 .disabled {
   cursor: not-allowed !important;
   opacity: 0.5;
   background: gray;
 }
 
-/* Dot (bullet) style for Splide pagination */
-.splide__pagination__page {
-  width: 22px !important;
-  height: 22px !important;
-  background-color: var(--wp--preset--color--base) !important;
-  border-radius: 50% !important;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
-  opacity: 1 !important;
-  border: 2px solid var(--wp--preset--color--base) !important;
-  background-color: transparent !important;
-}
-.splide__pagination__page:hover {
-  background-color: var(--wp--preset--color--base) !important;
-  transition: background-color 0.3s ease !important;
-  width: 24px !important;
-  height: 24px !important;
-}
-
-.splide__pagination__page.is-active {
-  background-color: var(--wp--preset--color--base) !important;
-  box-shadow: 0 0 10px rgb(0, 0, 0) !important;
-}
-
-.it-btn-container .custom-btn-text {
-  color: white !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
+.splide__pagination {
+  gap: 0.3rem;
 }
 
 /*# sourceMappingURL=index.css.map*/

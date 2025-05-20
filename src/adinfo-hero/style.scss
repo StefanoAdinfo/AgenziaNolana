@@ -1,12 +1,65 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wp-block-myblocks-adinfo-hero {
+	margin: 0 !important;
+	padding: 0 !important;
+	margin-block-start: 0 !important;
+	margin-block-end: 0 !important;
+}
 
-// .wp-block-myblocks-adinfo-hero {
-// 	background-color: #21759b;
-// 	color: #fff;
-// 	padding: 2px;
-// }
+.carusel-hero {
+	margin: 0 !important;
+	padding: 0 !important;
+
+	.splide__track {
+		position: relative;
+	}
+
+	.splide__pagination {
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 10;
+		display: flex;
+		gap: 0.3rem;
+	}
+}
+
+.splide__slide {
+	width: 100%;
+	height: 680px !important;
+}
+
+.slide-content {
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+	h2 {
+		color: #0066cc;
+	}
+
+	p {
+		color: white;
+	}
+}
+/* Dot (bullet) style for Splide pagination */
+.splide__pagination__page {
+	width: 22px !important;
+	height: 22px !important;
+	background-color: white !important;
+	border-radius: 50% !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
+	opacity: 1 !important;
+	border: 2px solid white !important;
+	background-color: transparent !important;
+
+	&:hover {
+		background-color: white !important;
+		transition: background-color 0.3s ease !important;
+		width: 24px !important;
+		height: 24px !important;
+	}
+}
+
+.splide__pagination__page.is-active {
+	background-color: white !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1) !important;
+}

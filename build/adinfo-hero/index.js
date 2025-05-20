@@ -2817,7 +2817,7 @@ var SplideSlide = ({ children: children2, className, ...props }) => {
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/adinfo-hero","version":"0.1.0","title":"Adinfo Hero","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"autoplay":{"type":"boolean","default":true},"slides":{"type":"array","default":[{"overline":"","title":"","subtitle":"","backgroundImage":"","buttonLink":{"url":""},"buttonText":""}]}},"textdomain":"adinfo-hero","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/adinfo-hero","version":"0.1.0","title":"Adinfo Hero","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"autoplay":{"type":"boolean","default":true},"slides":{"type":"array","default":[{"overline":"","title":"","subtitle":"","backgroundImage":"","buttonLink":"","buttonText":""}]}},"textdomain":"adinfo-hero","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ }),
 
@@ -2887,9 +2887,7 @@ function Edit({
       subtitle: "",
       backgroundImage: "",
       buttonText: "",
-      buttonLink: {
-        url: ""
-      },
+      buttonLink: "",
       buttonText: ""
     }];
     targetIndexRef.current = newSlides.length - 1;
@@ -2920,7 +2918,6 @@ function Edit({
   }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    className: "carusel-hero",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: "Impostazioni Hero",
@@ -3002,16 +2999,21 @@ function Edit({
                 value: slide.subtitle,
                 onChange: value => updateSlide(index, "subtitle", value),
                 placeholder: "Sottotitolo"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
                 className: "it-btn-container mb-3 ",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
                   onClick: () => toggleLinkInput(index),
                   tagName: "span",
                   value: slide.buttonText,
                   onChange: value => updateSlide(index, "buttonText", value),
                   placeholder: "Testo bottone",
                   className: "btn btn-sm btn-secondary d-inline-block text-white text-decoration-none"
-                })
+                }), showLinkInputs[index] && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.URLInputButton, {
+                  url: slide.buttonLink || "",
+                  onChange: value => updateSlide(index, "buttonLink", value),
+                  className: "mt-3",
+                  label: "Seleziona una pagina"
+                })]
               })]
             })]
           })
@@ -3316,7 +3318,7 @@ module.exports = window["ReactJSXRuntime"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkmyhero"] = globalThis["webpackChunkmyhero"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkadinfo_hero"] = globalThis["webpackChunkadinfo_hero"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

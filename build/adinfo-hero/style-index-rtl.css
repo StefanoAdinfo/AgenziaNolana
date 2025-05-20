@@ -1,9 +1,64 @@
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/adinfo-hero/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wp-block-myblocks-adinfo-hero {
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+.carusel-hero {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.carusel-hero .splide__track {
+  position: relative;
+}
+.carusel-hero .splide__pagination {
+  position: absolute;
+  bottom: 1rem;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.splide__slide {
+  width: 100%;
+  height: 680px !important;
+}
+
+.slide-content {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.slide-content h2 {
+  color: #0066cc;
+}
+.slide-content p {
+  color: white;
+}
+
+/* Dot (bullet) style for Splide pagination */
+.splide__pagination__page {
+  width: 22px !important;
+  height: 22px !important;
+  background-color: white !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
+  opacity: 1 !important;
+  border: 2px solid white !important;
+  background-color: transparent !important;
+}
+.splide__pagination__page:hover {
+  background-color: white !important;
+  transition: background-color 0.3s ease !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.splide__pagination__page.is-active {
+  background-color: white !important;
+  box-shadow: 0 0 10px rgb(0, 0, 0) !important;
+}

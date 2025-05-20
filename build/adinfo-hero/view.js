@@ -24,20 +24,12 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-/* eslint-disable no-console */
-console.log("Hello World! (from myblocks-adinfo-hero block)");
-/* eslint-enable no-console */
-
 document.addEventListener("DOMContentLoaded", function () {
-  const el = document.querySelector(".splide");
-  if (el) {
-    new Splide(el, {
-      type: "loop",
-      perPage: 3,
-      arrows: true,
-      pagination: true
-    }).mount();
-  }
+  document.querySelectorAll(".splide").forEach(el => {
+    const options = el.dataset.splide ? JSON.parse(el.dataset.splide) : {};
+    console.log(options);
+    new Splide(el, options).mount();
+  });
 });
 /******/ })()
 ;
