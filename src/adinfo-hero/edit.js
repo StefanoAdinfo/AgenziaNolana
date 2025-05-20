@@ -189,7 +189,7 @@ export default function Edit({ attributes, setAttributes }) {
 												updateSlide(index, "buttonText", value)
 											}
 											placeholder="Testo bottone"
-											className="btn btn-sm btn-secondary d-inline-block text-white text-decoration-none"
+											className="btn btn-sm btn-primary d-inline-block text-white text-decoration-none"
 										/>
 
 										{showLinkInputs[index] && (

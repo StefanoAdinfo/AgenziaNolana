@@ -24,7 +24,7 @@ $carousel_options = [
 						$style = "background-image: url('{$url}'); background-size: cover; background-position: center; min-height: 400px;";
 					}
 				?>
-					<div class="splide__slide d-flex align-items-center justify-content-center bg-light" style="<?php echo esc_attr($style); ?>">
+					<div class="splide__slide d-flex align-items-center justify-content-center bg-light " style="<?php echo esc_attr($style); ?>">
 						<div class="slide-content-wrapper container">
 							<div class="it-hero-text-wrapper slide-content">
 								<?php if (! empty($slide['overline'])) : ?>
@@ -43,9 +43,6 @@ $carousel_options = [
 									<div class="it-btn-container mb-3">
 										<a
 											href="<?php echo esc_url($slide['buttonLink'] ?? '#'); ?>"
-											<?php if (! empty($slide['buttonLink']['opensInNewTab'])) : ?>
-											target="_blank" rel="noopener noreferrer"
-											<?php endif; ?>
 											class="btn btn-sm btn-secondary text-white text-decoration-none">
 											<?php echo esc_html($slide['buttonText']); ?>
 										</a>

@@ -3007,7 +3007,7 @@ function Edit({
                   value: slide.buttonText,
                   onChange: value => updateSlide(index, "buttonText", value),
                   placeholder: "Testo bottone",
-                  className: "btn btn-sm btn-secondary d-inline-block text-white text-decoration-none"
+                  className: "btn btn-sm btn-primary d-inline-block text-white text-decoration-none"
                 }), showLinkInputs[index] && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.URLInputButton, {
                   url: slide.buttonLink || "",
                   onChange: value => updateSlide(index, "buttonLink", value),
