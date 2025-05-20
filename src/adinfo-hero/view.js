@@ -21,5 +21,17 @@
  */
 
 /* eslint-disable no-console */
-console.log( 'Hello World! (from myblocks-adinfo-hero block)' );
+console.log("Hello World! (from myblocks-adinfo-hero block)");
 /* eslint-enable no-console */
+
+document.addEventListener("DOMContentLoaded", function () {
+	const el = document.querySelector(".splide");
+	if (el) {
+		new Splide(el, {
+			type: "loop",
+			perPage: 3,
+			arrows: true,
+			pagination: true,
+		}).mount();
+	}
+});

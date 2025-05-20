@@ -19,7 +19,16 @@
 		"slides": {
 			"type": "array",
 			"default": [
-				{ "title": "", "subtitle": "", "backgroundImage": "", "buttonLink": "" }
+				{
+					"overline": "",
+					"title": "",
+					"subtitle": "",
+					"backgroundImage": "",
+					"buttonLink": {
+						"url": ""
+					},
+					"buttonText": ""
+				}
 			]
 		}
 	},

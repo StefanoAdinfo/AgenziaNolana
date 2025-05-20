@@ -25,10 +25,14 @@ return array(
 				'type' => 'array',
 				'default' => array(
 					array(
+						'overline' => '',
 						'title' => '',
 						'subtitle' => '',
 						'backgroundImage' => '',
-						'buttonLink' => ''
+						'buttonLink' => array(
+							'url' => ''
+						),
+						'buttonText' => ''
 					)
 				)
 			)

@@ -20,10 +20,14 @@
       "type": "array",
       "default": [
         {
+          "overline": "",
           "title": "",
           "subtitle": "",
           "backgroundImage": "",
-          "buttonLink": ""
+          "buttonLink": {
+            "url": ""
+          },
+          "buttonText": ""
         }
       ]
     }

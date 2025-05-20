@@ -34,6 +34,14 @@ add_action('wp_enqueue_scripts', 'pa_centrale_styles');
 // Carico i file di Bootstrap Italia nel frontend
 function  bootstrap_italia_setup()
 {
+	wp_register_style('splide-style', get_parent_theme_file_uri('assets/css/splide-core.min.css'));
+	wp_enqueue_style('splide-style');
+
+	wp_register_script('splide-script', get_parent_theme_file_uri('assets/js/splide.min.js'));
+	wp_enqueue_script('splide-script');
+
+
+
 	wp_register_style('bootstrap-italia-style', get_parent_theme_file_uri('assets/css/bootstrap-italia.min.css'));
 	wp_enqueue_style('bootstrap-italia-style');
 	wp_register_script('bootstrap-italia-script', get_parent_theme_file_uri('assets/js/bootstrap-italia.min.js'));
@@ -41,13 +49,6 @@ function  bootstrap_italia_setup()
 
 	wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
 	wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', [], null, true);
-
-
-	wp_register_style('splide-style', get_parent_theme_file_uri('assets/css/splide-core.min.css'));
-	wp_enqueue_style('splide-style');
-
-	wp_register_script('splide-script', get_parent_theme_file_uri('assets/js/splide.min.js'));
-	wp_enqueue_script('splide-script');
 }
 add_action('after_setup_theme', 'bootstrap_italia_setup');
 
@@ -56,15 +57,19 @@ add_action('after_setup_theme', 'bootstrap_italia_setup');
 // Carico i file di Bootstrap Italia anche nell'editor di WordPress
 function mytheme_enqueue_editor_assets()
 {
+	add_editor_style(get_parent_theme_file_uri('assets/css/splide-core.min.css'));
+	wp_enqueue_script(get_parent_theme_file_uri('assets/js/splide.min.js'));
+
+
+
+
 	// Carica il CSS principale del tema
 	add_editor_style(get_parent_theme_file_uri('assets/css/bootstrap-italia.min.css'));
 
 
-	add_editor_style(get_parent_theme_file_uri('assets/css/splide-core.min.css'));
 
 	// // Carica il JS di Bootstrap Italia
 	wp_enqueue_script(get_parent_theme_file_uri('assets/js/bootstrap-italia.min.js'));
-	wp_enqueue_script(get_parent_theme_file_uri('assets/js/splide.min.js'));
 
 	wp_enqueue_script('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css', array(), null, true);
 
