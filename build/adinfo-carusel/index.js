@@ -2817,7 +2817,7 @@ var SplideSlide = ({ children: children2, className, ...props }) => {
   \***************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/adinfo-carusel","version":"0.1.0","title":"Adinfo Carusel","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"titolo_carosello":{"type":"string","default":""},"autoplay":{"type":"boolean","default":true},"slides":{"type":"array","default":[{"image":""}]}},"textdomain":"adinfo-carusel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"myblocks/adinfo-carusel","version":"0.1.0","title":"Adinfo Carusel","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false,"anchor":false},"attributes":{"titolo_carosello":{"type":"string","default":""},"autoplay":{"type":"boolean","default":true},"slides":{"type":"array","default":[{"image":""}]}},"textdomain":"adinfo-carusel","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ }),
 
@@ -2884,7 +2884,6 @@ function Edit({
     if (slides.length <= 1) return;
     const newSlides = [...slides];
     newSlides.splice(indexToRemove, 1);
-
     // Vai alla slide precedente se possibile
     targetIndexRef.current = Math.min(indexToRemove, newSlides.length - 1);
     setAttributes({
@@ -2920,7 +2919,7 @@ function Edit({
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       class: "container overflow-hidden it-carousel-wrapper adinfo-carusel-editor adinfo-carusel",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-        class: "it-header-block",
+        class: "it-header-block mb-4",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           class: "it-header-block-title",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
@@ -2929,7 +2928,8 @@ function Edit({
             onChange: value => setAttributes({
               titolo_carosello: value
             }),
-            placeholder: "Titolo del carosello"
+            placeholder: "Titolo del carosello",
+            allowedFormats: []
           })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.Splide, {
@@ -2955,48 +2955,50 @@ function Edit({
           }
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.SplideTrack, {
-          children: slides.map((slide, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.SplideSlide, {
+          children: slides.map((slide, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_splidejs_react_splide__WEBPACK_IMPORTED_MODULE_3__.SplideSlide, {
             className: "bg-light",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-              className: "slide-controls",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-                className: "slide-button remove",
-                onClick: () => removeSlide(index),
-                disabled: slides.length === 1,
-                title: "Rimuovi slide",
-                children: "\u2212"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
-                className: "slide-button add",
-                onClick: addSlide,
-                title: "Aggiungi slide",
-                children: "\uFF0B"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
-                onSelect: media => updateSlide(index, "image", media.url),
-                allowedTypes: ["image"],
-                value: slide.image,
-                render: ({
-                  open
-                }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-                  onClick: open,
-                  style: {
-                    cursor: "pointer"
-                  },
-                  children: slide.image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-                    src: slide.image,
-                    alt: "Anteprima immagine",
-                    title: "Clicca per cambiare immagine"
-                  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-                    className: "fallback-image",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-                      className: "fallback-icon",
-                      children: "\uFF0B"
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+              className: "slide-wrapper",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+                className: "slide-controls",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                  className: `slide-button ${slides.length == 1 ? "disabled" : "remove"}`,
+                  onClick: () => removeSlide(index),
+                  disabled: slides.length == 1,
+                  title: "Rimuovi slide",
+                  children: "\u2212"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+                  className: "slide-button add",
+                  onClick: addSlide,
+                  title: "Aggiungi slide",
+                  children: "\uFF0B"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+                  onSelect: media => updateSlide(index, "image", media.url),
+                  allowedTypes: ["image"],
+                  value: slide.image,
+                  render: ({
+                    open
+                  }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+                    onClick: open,
+                    className: "image-wrapper",
+                    children: slide.image ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+                      src: slide.image,
+                      alt: "Anteprima immagine",
+                      title: "Clicca per cambiare immagine",
+                      className: "slide-image"
+                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+                      className: "fallback-image",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+                        className: "fallback-icon",
+                        children: "\uFF0B"
+                      })
                     })
                   })
                 })
-              })
-            })]
+              })]
+            })
           }, index))
         })
       }, slides.length)]

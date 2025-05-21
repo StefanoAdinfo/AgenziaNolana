@@ -25,6 +25,16 @@
 }
 
 .adinfo-hero {
+	.components-button:not(:disabled, [aria-disabled="false"]),
+	.components-button[aria-expanded="false"] {
+		color: white;
+	}
+
+	.components-button:hover:not(:disabled, [aria-disabled="true"]),
+	.components-button[aria-expanded="true"] {
+		color: #0066cc;
+	}
+
 	.splide__slide {
 		width: 100%;
 		height: 680px !important;

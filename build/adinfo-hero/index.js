@@ -2982,18 +2982,21 @@ function Edit({
                       value: slide.overline,
                       className: "it-category",
                       onChange: value => updateSlide(index, "overline", value),
-                      placeholder: "Titolo occhiello"
+                      placeholder: "Titolo occhiello",
+                      allowedFormats: []
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
                       tagName: "h2",
                       value: slide.title,
                       onChange: value => updateSlide(index, "title", value),
-                      placeholder: "Titolo"
+                      placeholder: "Titolo",
+                      allowedFormats: []
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
                       tagName: "p",
                       value: slide.subtitle,
                       className: "d-none d-lg-block",
                       onChange: value => updateSlide(index, "subtitle", value),
-                      placeholder: "Sottotitolo"
+                      placeholder: "Sottotitolo",
+                      allowedFormats: []
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
                       className: "it-btn-container mb-3",
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
@@ -3002,6 +3005,7 @@ function Edit({
                         value: slide.buttonText,
                         onChange: value => updateSlide(index, "buttonText", value),
                         placeholder: "Testo bottone",
+                        allowedFormats: [],
                         className: "btn btn-sm btn-secondary text-white text-decoration-none"
                       }), showLinkInputs[index] && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.URLInputButton, {
                         url: slide.buttonLink || "",

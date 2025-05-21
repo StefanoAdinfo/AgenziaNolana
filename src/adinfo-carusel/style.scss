@@ -14,8 +14,37 @@
 		gap: 0.3rem;
 	}
 }
+
 // Per editor e render
 .adinfo-carusel {
+	.fallback-image {
+		width: 100%;
+		height: 100%;
+		background-color: #f8f9fa;
+		border: 2px dashed #ccc;
+		border-radius: 0.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* stile opzionale per l'icona + */
+	.fallback-icon {
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		background-color: #ccc;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2.5rem;
+		color: white;
+	}
+	padding: 20px 0px !important;
+
+	.splide__track {
+		padding-top: 0px !important;
+	}
 	.splide__slide {
 		width: 800px !important;
 		height: 450px !important;
@@ -60,19 +89,29 @@
 			width: 500px;
 			height: 300px;
 		}
+		.it-carousel-wrapper .splide__pagination button {
+			width: 14px !important;
+			height: 14px !important;
+			margin: 0 6px !important;
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	.splide__slide {
+		width: 300px !important;
+		height: 200px !important;
+		img {
+			width: 300px;
+		}
+	}
+	.fallback-image {
+		width: 300px;
+		height: 200px;
 	}
 
-	@media screen and (max-width: 480px) {
-		.splide__slide {
-			width: 300px !important;
-			height: 200px !important;
-			img {
-				width: 300px;
-			}
-		}
-		.fallback-image {
-			width: 300px;
-			height: 200px;
-		}
+	.it-carousel-wrapper .splide__pagination button {
+		width: 10px !important;
+		height: 10px !important;
+		margin: 0 4px !important;
 	}
 }

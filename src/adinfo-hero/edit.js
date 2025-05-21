@@ -140,6 +140,7 @@ export default function Edit({ attributes, setAttributes }) {
 														updateSlide(index, "overline", value)
 													}
 													placeholder="Titolo occhiello"
+													allowedFormats={[]}
 												/>
 												<RichText
 													tagName="h2"
@@ -148,6 +149,7 @@ export default function Edit({ attributes, setAttributes }) {
 														updateSlide(index, "title", value)
 													}
 													placeholder="Titolo"
+													allowedFormats={[]}
 												/>
 												<RichText
 													tagName="p"
@@ -157,6 +159,7 @@ export default function Edit({ attributes, setAttributes }) {
 														updateSlide(index, "subtitle", value)
 													}
 													placeholder="Sottotitolo"
+													allowedFormats={[]}
 												/>
 
 												<div className="it-btn-container mb-3">
@@ -168,6 +171,7 @@ export default function Edit({ attributes, setAttributes }) {
 															updateSlide(index, "buttonText", value)
 														}
 														placeholder="Testo bottone"
+														allowedFormats={[]}
 														className="btn btn-sm btn-secondary text-white text-decoration-none"
 													/>
 

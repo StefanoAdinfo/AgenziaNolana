@@ -14,7 +14,8 @@ return array(
 			
 		),
 		'supports' => array(
-			'html' => false
+			'html' => false,
+			'anchor' => false
 		),
 		'attributes' => array(
 			'titolo_carosello' => array(

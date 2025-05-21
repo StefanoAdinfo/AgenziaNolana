@@ -41,10 +41,8 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const removeSlide = (indexToRemove) => {
 		if (slides.length <= 1) return;
-
 		const newSlides = [...slides];
 		newSlides.splice(indexToRemove, 1);
-
 		// Vai alla slide precedente se possibile
 		targetIndexRef.current = Math.min(indexToRemove, newSlides.length - 1);
 		setAttributes({ slides: newSlides });
@@ -73,13 +71,14 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 			<div class="container overflow-hidden it-carousel-wrapper adinfo-carusel-editor adinfo-carusel">
-				<div class="it-header-block">
+				<div class="it-header-block mb-4">
 					<div class="it-header-block-title">
 						<RichText
 							tagName="h2"
 							value={titolo_carosello}
 							onChange={(value) => setAttributes({ titolo_carosello: value })}
 							placeholder="Titolo del carosello"
+							allowedFormats={[]}
 						/>
 					</div>
 				</div>
@@ -110,46 +109,52 @@ export default function Edit({ attributes, setAttributes }) {
 					<SplideTrack>
 						{slides.map((slide, index) => (
 							<SplideSlide key={index} className="bg-light">
-								<div className="slide-controls">
-									<Button
-										className="slide-button remove"
-										onClick={() => removeSlide(index)}
-										disabled={slides.length === 1}
-										title="Rimuovi slide"
-									>
-										−
-									</Button>
-									<Button
-										className="slide-button add"
-										onClick={addSlide}
-										title="Aggiungi slide"
-									>
-										＋
-									</Button>
+								<div className="slide-wrapper">
+									<div className="slide-controls">
+										<Button
+											className={`slide-button ${
+												slides.length == 1 ? "disabled" : "remove"
+											}`}
+											onClick={() => removeSlide(index)}
+											disabled={slides.length == 1}
+											title="Rimuovi slide"
+										>
+											−
+										</Button>
+										<Button
+											className="slide-button add"
+											onClick={addSlide}
+											title="Aggiungi slide"
+										>
+											＋
+										</Button>
+									</div>
+									<MediaUploadCheck>
+										<MediaUpload
+											onSelect={(media) =>
+												updateSlide(index, "image", media.url)
+											}
+											allowedTypes={["image"]}
+											value={slide.image}
+											render={({ open }) => (
+												<div onClick={open} className="image-wrapper">
+													{slide.image ? (
+														<img
+															src={slide.image}
+															alt="Anteprima immagine"
+															title="Clicca per cambiare immagine"
+															className="slide-image"
+														/>
+													) : (
+														<div className="fallback-image">
+															<div className="fallback-icon">＋</div>
+														</div>
+													)}
+												</div>
+											)}
+										/>
+									</MediaUploadCheck>
 								</div>
-
-								<MediaUploadCheck>
-									<MediaUpload
-										onSelect={(media) => updateSlide(index, "image", media.url)}
-										allowedTypes={["image"]}
-										value={slide.image}
-										render={({ open }) => (
-											<div onClick={open} style={{ cursor: "pointer" }}>
-												{slide.image ? (
-													<img
-														src={slide.image}
-														alt="Anteprima immagine"
-														title="Clicca per cambiare immagine"
-													/>
-												) : (
-													<div className="fallback-image">
-														<div className="fallback-icon">＋</div>
-													</div>
-												)}
-											</div>
-										)}
-									/>
-								</MediaUploadCheck>
 							</SplideSlide>
 						))}
 					</SplideTrack>
