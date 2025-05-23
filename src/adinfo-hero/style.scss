@@ -1,13 +1,13 @@
 .wp-block-myblocks-adinfo-hero {
-	margin: 0 !important;
-	padding: 0 !important;
-	margin-block-start: 0 !important;
-	margin-block-end: 0 !important;
+	margin: 0;
+	padding: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 .adinfo-hero-render {
-	margin: 0 !important;
-	padding: 0 !important;
+	margin: 0;
+	padding: 0;
 
 	.splide__track {
 		position: relative;
@@ -37,30 +37,30 @@
 
 	.splide__slide {
 		width: 100%;
-		height: 680px !important;
+		height: 680px;
 	}
 
 	/* Dot (bullet) style for Splide pagination */
 	.splide__pagination__page {
-		width: 22px !important;
-		height: 22px !important;
-		background-color: white !important;
-		border-radius: 50% !important;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
-		opacity: 1 !important;
-		border: 2px solid white !important;
-		background-color: transparent !important;
+		width: 22px;
+		height: 22px;
+		background-color: white;
+		border-radius: 50%;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+		opacity: 1;
+		border: 2px solid white;
+		background-color: transparent;
 
 		&:hover {
-			background-color: white !important;
-			transition: background-color 0.3s ease !important;
-			width: 24px !important;
-			height: 24px !important;
+			background-color: white;
+			transition: background-color 0.3s ease;
+			width: 24px;
+			height: 24px;
 		}
 	}
 
 	.splide__pagination__page.is-active {
-		background-color: white !important;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 1) !important;
+		background-color: white;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 	}
 }

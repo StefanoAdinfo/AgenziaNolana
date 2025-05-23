@@ -80,7 +80,7 @@ function Edit() {
             "aria-controls": "collapseOne",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               style: {
-                color: '#0066cc'
+                color: "#0066cc"
               },
               children: "INDICE DELLA PAGINA"
             })
@@ -106,12 +106,6 @@ function Edit() {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
                   href: "#a-cura-di",
                   children: "A cura di"
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                className: "indice-item",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                  href: "#esplora-novita",
-                  children: "Esplora novit\xE0"
                 })
               })]
             })

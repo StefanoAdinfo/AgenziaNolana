@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-import { __ } from '@wordpress/i18n';
+import { __ } from "@wordpress/i18n";
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from "@wordpress/block-editor";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -19,7 +19,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import './editor.scss';
+import "./editor.scss";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -31,7 +31,7 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
+		<p {...useBlockProps()}>
 			<div className="accordion border-0" id="accordionExample">
 				<div className="accordion-item border-0">
 					<h2 className="accordion-header">
@@ -43,9 +43,7 @@ export default function Edit() {
 							aria-expanded="true"
 							aria-controls="collapseOne"
 						>
-							<span style={ { color: '#0066cc' } }>
-								INDICE DELLA PAGINA
-							</span>
+							<span style={{ color: "#0066cc" }}>INDICE DELLA PAGINA</span>
 						</button>
 					</h2>
 					<div className="indice-bar"></div>
@@ -61,9 +59,6 @@ export default function Edit() {
 								</li>
 								<li className="indice-item">
 									<a href="#a-cura-di">A cura di</a>
-								</li>
-								<li className="indice-item">
-									<a href="#esplora-novita">Esplora novità</a>
 								</li>
 							</ul>
 						</div>

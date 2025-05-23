@@ -2,15 +2,15 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/adinfo-hero/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************/
 .wp-block-myblocks-adinfo-hero {
-  margin: 0 !important;
-  padding: 0 !important;
-  margin-block-start: 0 !important;
-  margin-block-end: 0 !important;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .adinfo-hero-render {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 .adinfo-hero-render .splide__track {
   position: relative;
@@ -38,27 +38,27 @@
 }
 .adinfo-hero .splide__slide {
   width: 100%;
-  height: 680px !important;
+  height: 680px;
 }
 .adinfo-hero .splide__pagination__page {
-  width: 22px !important;
-  height: 22px !important;
-  background-color: white !important;
-  border-radius: 50% !important;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
-  opacity: 1 !important;
-  border: 2px solid white !important;
-  background-color: transparent !important;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  border: 2px solid white;
+  background-color: transparent;
 }
 .adinfo-hero .splide__pagination__page:hover {
-  background-color: white !important;
-  transition: background-color 0.3s ease !important;
-  width: 24px !important;
-  height: 24px !important;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  width: 24px;
+  height: 24px;
 }
 .adinfo-hero .splide__pagination__page.is-active {
-  background-color: white !important;
-  box-shadow: 0 0 10px rgb(0, 0, 0) !important;
+  background-color: white;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 /*# sourceMappingURL=style-index.css.map*/
